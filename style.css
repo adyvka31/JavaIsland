@@ -24,7 +24,7 @@ p + p {
 }
 
 .bg-pulau {
-  background-image: url('Images/pulau-jawa.png');
+  background-image: url('Images/pulau-jawa1.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -35,10 +35,16 @@ p + p {
 }
 
 .card-wrap {
-  margin: 30px;
+  margin: 30px 20px;
   transform: perspective(800px);
   transform-style: preserve-3d;
   cursor: pointer;
+}
+
+@media (min-width: 200px) and (max-width: 1024px) {
+  .card-wrap {
+    margin: 10px 10px;
+  }
 }
 
 .card-wrap:hover .card-info {
@@ -153,11 +159,19 @@ p + p {
   background-repeat: no-repeat;
   width: 100%;
 }
+
 .javaisland{
     background: #D2FF72;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 200px #D2FF72;
+}
+
+.javaisland2{
+  background: linear-gradient(to right, #15B392, #159378);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 200px #15B392;
 }
 
 .garis::after {
@@ -185,9 +199,8 @@ p + p {
 
 .page-content {
   display: grid;
-  grid-gap: 1rem;
-  padding: 1rem;
-  max-width: 1024px;
+  grid-gap: 3rem;
+  max-width: 1700px;
   margin: 0 auto;
   font-family: var(--font-sans);
 }
@@ -219,6 +232,12 @@ p + p {
     0 4px 4px rgba(0,0,0,0.1), 
     0 8px 8px rgba(0,0,0,0.1),
     0 16px 16px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .page-content{
+    grid-gap: 1rem;
+  }
 }
 
 @media (min-width: 600px) {
@@ -404,10 +423,10 @@ p + p {
     animation: bounce 2.2s infinite alternate;
 }
 .awankiri{
-  animation: awankiri 2.8s infinite alternate;
+  animation: awankiri 2s infinite alternate;
 }
 .awankanan{
-  animation: awankanan 2.8s infinite alternate;
+  animation: awankanan 2s infinite alternate;
 }
 
 .fadeinup2{
@@ -495,14 +514,14 @@ p + p {
 }
 @keyframes awankiri {
   from{
-      transform: translateX(20px);
+      transform: translateX(25px);
   } to{
       transform: translateX(-3px);
   }
 }
 @keyframes awankanan {
   from{
-      transform: translateX(-20px);
+      transform: translateX(-25px);
   } to{
       transform: translateX(3px);
   }

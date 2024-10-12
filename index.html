@@ -1,14 +1,97 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JAVAISLAND | Pulau Jawa</title>
+    <title>JAVAISLAND | Pulau Jawa | Home</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@500;700&display=swap" rel="stylesheet"/>
+<style>
+   /* Custom animation for seamless marquee */
+   @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Marquee animation control */
+    .marquee {
+      display: flex;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .marquee-content {
+      display: inline-flex;
+      animation: marquee 30s linear infinite;
+    }
+
+    /* Duplicate marquee content to create infinite loop */
+    .marquee-content > div {
+      flex-shrink: 0;
+    }
+
+    /* Stop animation on hover */
+    .marquee:hover .marquee-content {
+      animation-play-state: paused;
+    }
+
+    /* Hover effect */
+    .image-container:hover .overlay {
+      background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
+    }
+
+    .image-container:hover .overlay-text {
+      opacity: 1;
+    }
+
+    .image-container:hover img {
+      transform: scale(1.1); /* Zoom effect */
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0);
+      transition: background-color 0.3s ease;
+    }
+
+    .overlay-text {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    img {
+      transition: transform 0.3s ease; /* Smooth zoom effect */
+    }
+
+    .overlay-content {
+      text-align: center;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .overlay-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .overlay-description {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+    </style>
   </head>
-  <body class="bg-yellow-50">
+
+  <body class="bg-yellow-50"></body>
 
     <!-- NAVBAR --> <!-- NAVBAR --> <!-- NAVBAR --> <!-- NAVBAR -->
 
@@ -18,7 +101,7 @@
       <div class="flex justify-evenly items-center px-16">
         <ul class="flex space-x-20">
           <li>
-            <a href="#" class="text-[#D2FF72] relative garis font-bold">HOME</a>
+            <a href="#" class="text-[#D2FF72] relative garis font-bold">Home</a>
           </li>
           <li>
             <a href="#" class="text-white relative garis font-semibold"
@@ -34,7 +117,7 @@
             >
           </li>
           <li>
-            <a href="#" class="text-white relative garis font-semibold"
+            <a href="login.html" class="text-white relative garis font-semibold"
               >ABOUT</a
             >
           </li>
@@ -45,16 +128,14 @@
     <!-- HERO --> <!-- HERO --> <!-- HERO --> <!-- HERO -->
 
     <section
-      style="object-fit: fill"
       class="w-screen h-screen text-gray-600 body-font mx-auto bg-[url(Images/background-hero.png)] bg-[center_bottom_-4rem] bg-cover bg-no-repeat"
     >
       <div
-        class="container mx-auto flex px-5 py-52 items-center justify-center flex-col fadeinup"
+        class="w-full h-full container mx-auto flex px-5 items-center justify-center flex-col fadeinup"
       >
-        <div class="text-center lg:w-2/3 w-full">
-          <h1></h1>
+        <div class="text-center mb-28 lg:w-2/3 w-full">
           <h1
-            class="title-font text-7xl mb-4 font-['dapik'] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] leading-tight font-medium text-white bounce"
+            class="lg:text-7xl md:text-7xl max-[750px]:text-4xl mb-4 font-['dapik'] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] leading-tight font-medium text-white bounce"
           >
             EXPLORE <br />
             <span class="javaisland">JAVAISLAND</span> IN <br />
@@ -89,20 +170,17 @@
 
     <!-- KOTA --> <!-- KOTA --> <!-- KOTA --> <!-- KOTA -->
 
-    <div id="app" class="container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center items-center mx-auto py-48 pt-60 bg-pulau">
-      <h1 class=" absolute title-font text-6xl mb-4 font-['dapik'] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] leading-tight font-medium left-[40%] mt-5 text-white bounce">
-        OUR CITY
-      </h1>
+    <div id="app" class=" w-full h-full container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center items-center mx-auto py-48 pt-60 lg:bg-[url('Images/pulau-jawa1.png')] bg-center bg-contain bg-no-repeat md:bg-none sm:bg-none">
       <img
-        class="absolute bottom-[-21rem] left-16 w-32 z-20 awankiri"
+        class="absolute bottom-[-21rem] max-[750px]:hidden lg:left-16 md:left-4 w-32 z-20 awankiri"
         src="Images/awan.png"
       />
       <img
-        class="absolute bottom-[-21rem] right-16 w-32 z-20 awankanan"
+        class="absolute bottom-[-21rem] max-[750px]:hidden lg:right-16 md:right-4 w-32 z-20 awankanan"
         src="Images/awan.png"
       />
       <img
-        class="absolute bottom-[-48rem] left-[46%] w-32 z-20 fadeinup2"
+        class="absolute bottom-[-48rem] max-[750px]:hidden lg:left-[46%] md:left-[43%] md:hidden w-32 z-20 fadeinup2"
         src="Images/awan.png"
       />
       <card
@@ -133,7 +211,7 @@
         </p>
       </card>
       <card
-        class="fadeinleftup"
+        class="fadeinleftup lg:block md:hidden sm:block"
         data-image="https://i.pinimg.com/564x/e1/14/a5/e114a506a29c9488ecb315793cda0f85.jpg"
       >
         <h1 slot="header">Bandung</h1>
@@ -142,7 +220,7 @@
         </p>
       </card>
       <card
-        class="fadeinrightup"
+        class="fadeinrightup lg:block md:block"
         data-image="https://i.pinimg.com/564x/cb/48/7d/cb487d23a4c5969c091f7e2f35784434.jpg"
       >
         <h1 slot="header">Banyuwangi</h1>
@@ -151,7 +229,7 @@
         </p>
       </card>
       <card
-        class="fadeinrightup"
+        class="fadeinrightup lg:block md:block"
         data-image="https://i.pinimg.com/564x/e2/4e/5e/e24e5ef94cfef353218e54a82e5f1cb9.jpg"
       >
         <h1 slot="header">Yogyakarta</h1>
@@ -160,7 +238,7 @@
         </p>
       </card>
       <card
-        class="fadeinleftup"
+        class="fadeinleftup lg:block md:block max-[750px]:hidden"
         data-image="https://i.pinimg.com/564x/3e/72/e3/3e72e384192f6130cf0d75cfa1611367.jpg"
       >
         <h1 slot="header">Surabaya</h1>
@@ -169,7 +247,7 @@
         </p>
       </card>
       <card
-        class="fadeinleftup"
+        class="fadeinleftup lg:block md:hidden max-[750px]:hidden"
         data-image="https://i.pinimg.com/564x/90/21/18/902118a87cf0f0f1f75ddfa4a8a8454d.jpg"
       >
         <h1 slot="header">L Bajo</h1>
@@ -183,26 +261,26 @@
 
     <section class="relative bg-[#15B392] shadow-md">
       <div
-        class="container flex flex-col items-center px-4 py-48 mx-auto text-center"
+        class="container flex flex-col items-center px-4 lg:py-48 md:py-24 max-[750px]:py-12 mx-auto text-center"
       >
-        <img class="absolute w-28 top-14 fadeinup2" src="Images/awan2.png" />
+        <img class="absolute w-28 lg:block md:hidden max-[750px]:hidden top-14 fadeinup2" src="Images/awan2.png" />
         <img
-          class="absolute w-72 left-32 fadeinrightup"
+          class="absolute lg:w-72 md:w-40 max-[750px]:w-40 lg:left-32 md:left-10 max-[750px]:static mb-10 fadeinrightup"
           src="Images/wayang-kiri.png"
         />
         <img
-          class="absolute w-72 right-32 fadeinleftup"
+          class="absolute lg:w-72 md:w-40 max-[750px]:w-40 lg:right-3 md:right-10 max-[750px]:hidden fadeinleftup"
           src="Images/wayang-kanan.png"
         />
         <h2
-          class="text-2xl font-bold tracking-tight text-white xl:text-3xl fadeinup2"
+          class="text-2xl lg:w-1/3 md:w-72 max-[750px]:w-72 font-bold tracking-tight text-white xl:text-3xl fadeinup2"
         >
-          See and Witness the Shadow Puppet <br />
+          See and Witness the Shadow Puppet
           Cultural Event in Java!
         </h2>
 
         <p
-          class="block w-1/3 max-w-4xl mt-4 text-gray-200 fadeinup2"
+          class="block w-1/3 max-w-4xl max-[750px]:w-80 mt-4 text-gray-200 fadeinup2"
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum
           dolorem sequi
@@ -214,135 +292,278 @@
               <span>Visit The Area Now</span>
           </button>
         </div>
+        <img class="lg:hidden md:hidden sticky w-40 mt-10 fadeinleftup" src="Images/wayang-kiri.png">
       </div>
     </section>
 
-    <!-- MAKANAN KHAS --> <!-- MAKANAN KHAS --> <!-- MAKANAN KHAS --> <!-- MAKANAN KHAS -->
+    <!-- MAKANAN KHAS --> <!-- MAKANAN KHAS --> <!-- MAKANAN KHAS --> 
 
     <section class="text-gray-600 body-font">
-      <div class="container flex flex-wrap px-5 py-52 mx-auto items-center">
-        <div class="md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 mb-10 md:mb-0 pb-10 border-b border-gray-200">
-          <h1 class="sm:text-3xl text-2xl font-semibold mb-2 text-black fadeinrightup">
-            Some Favorite Foods
-          </h1>
-          <p class="leading-relaxed w-11/12 text-base fadeinrightup">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ipsum vel omnis tempore a praesentium magni nemo beatae? Sunt ipsum enim officiis debitis delectus repudiandae!
-          </p>
-          <div class="flex flex-col w-full max-w-xs mt-10">
-            <button class="bg-[#15B392] flex items-center text-white justify-center gap-x-1 text-sm sm:text-base rounded-lg hover:bg-[#268d76] shadow-md duration-500 transition-colors py-2.5">
-                <span>See More Special Food</span>
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-            </button>
-          </div>
+      <div class="container px-5 py-52 max-[750px]:pt-32 mx-auto">
+        <div class="flex flex-col text-center w-full lg:mb-24 md:mb-12 max-[750px]:mb-12">
+          <h1 class="text-5xl max-[750px]:text-4xl font-extrabold text-gray-900 fadeinup2">Taste <span class="javaisland2">JavaIsland</span> Best Food</h1>
+          <h1 class="absolute ">🍛</h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base fadeinup2">Get Know Our Favorite Food</p>
         </div>
-    
-        <div class="md:w-1/2 flex overflow-x-auto space-x-3 fadeinleftup">
-          <div class="cardd rounded-lg">
-            <div class="content">
-              <h2 class="title">Gudeg</h2>
-              <p class="copy">Lorem, ipsum dolor.</p>
-              <button class="btn">View Origin</button>
+        <div class="container flex flex-wrap px-5 mx-auto items-center">
+          <main class="page-content">
+            <div class="cardd rounded-lg fadeinrightup">
+              <div class="content">
+                <h2 class="title">Gudeg</h2>
+                <p class="copy">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+                  expedita fugiat explicabo mollitia?
+                </p>
+                <button class="btn">View Origin</button>
+              </div>
             </div>
-          </div>
-          <div class="cardd rounded-lg">
-            <div class="content">
-              <h2 class="title">Soto Kudus</h2>
-              <p class="copy">Lorem, ipsum dolor.</p>
-              <button class="btn">View Origin</button>
+        
+            <div class="cardd rounded-lg fadeinrightup">
+              <div class="content">
+                <h2 class="title">Soto Kudus</h2>
+                <p class="copy">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                  voluptates pariatur eos tempore.
+                </p>
+                <button class="btn">View Origin</button>
+              </div>
             </div>
-          </div>
-          <div class="cardd rounded-lg">
-            <div class="content">
-              <h2 class="title">Rawon</h2>
-              <p class="copy">Lorem, ipsum dolor.</p>
-              <button class="btn">View Origin</button>
+        
+            <div class="cardd rounded-lg fadeinleftup">
+              <div class="content">
+                <h2 class="title">Rawon</h2>
+                <p class="copy">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                  repellendus dolorum temporibus vero.
+                </p>
+                <button class="btn">View Origin</button>
+              </div>
             </div>
+        
+            <div class="cardd rounded-lg fadeinleftup max-[750px]:hidden">
+              <div class="content">
+                <h2 class="title">Lontong Sayur</h2>
+                  <p class="copy">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque cum
+                    molestiae delectus sunt.
+                  </p>
+                  <button class="btn">View Origin</button>
+                </div>
+              </div>
+            </main>
           </div>
-          <div class="cardd rounded-lg">
-            <div class="content">
-              <h2 class="title">Lontong Sayur</h2>
-              <p class="copy">Lorem, ipsum dolor.</p>
-              <button class="btn">View Origin</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> 
+        </section>
 
-    <section class="text-gray-600 body-font">
-      <div class="container px-5 pb-52 mx-auto">
-        <div class="flex flex-wrap w-full mb-20">
-          <p class="lg:w-1/2 w-full leading-relaxed text-base fadeinrightup">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
-          <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-            <h1 class="sm:text-3xl text-2xl font-semibold mb-2 text-end text-black fadeinleftup">Find The Best Tourist Attractions</h1>
-          </div>
-        </div>
-        <div class="flex flex-wrap -m-4">
+        <!-- <div class="flex flex-wrap -m-4">
           <div class="lg:w-1/3 sm:w-1/2 p-4">
-            <div class="flex relative fadeinrightup">
-              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/600x360">
-              <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:shadow-lg hover:opacity-100 duration-300">
-                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-                <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            <div class="flex relative fadeinrightup hover:-translate-y-2">
+              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center rounded-lg" src="https://i.pinimg.com/564x/fe/7f/01/fe7f01bc6c7e402e6b3c6ee983733155.jpg">
+              <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 hover:shadow-lg rounded-lg duration-300">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">MAGELANG</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Candi Borobudur</h1>
+                <p class="leading-relaxed">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus nisi architecto quasi, voluptate nam rem explicabo excepturi natus.</p>
               </div>
             </div>
           </div>
           <div class="lg:w-1/3 sm:w-1/2 p-4">
-            <div class="flex relative fadeinup2">
-              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/601x361">
-              <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:shadow-lg hover:opacity-100 duration-300">
-                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
-                <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            <div class="flex relative hover:-translate-y-2 fadeinup2">
+              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-top rounded-lg" src="https://img.jakpost.net/c/2017/12/24/2017_12_24_37849_1514123622._large.jpg">
+              <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 hover:shadow-lg rounded-lg duration-300">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">JAKARTA</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Monumen Nasional</h1>
+                <p class="leading-relaxed">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus nisi architecto quasi, voluptate nam rem explicabo excepturi natus.</p>
               </div>
             </div>
           </div>
           <div class="lg:w-1/3 sm:w-1/2 p-4">
-            <div class="flex relative fadeinleftup">
-              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/603x363">
-              <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:shadow-lg hover:opacity-100 duration-300">
-                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
-                <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            <div class="flex relative hover:-translate-y-2 fadeinleftup">
+              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center rounded-lg" src="https://i.pinimg.com/564x/a7/8b/5f/a78b5fa5de77f2598ff18be5a8a297d8.jpg">
+              <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 hover:shadow-lg rounded-lg duration-300">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">BOGOR</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Kebun Raya Bogor</h1>
+                <p class="leading-relaxed">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus nisi architecto quasi, voluptate nam rem explicabo excepturi natus.</p>
               </div>
             </div>
           </div>
           <div class="lg:w-1/3 sm:w-1/2 p-4">
-            <div class="flex relative fadeinrightup">
-              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/602x362">
-              <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:shadow-lg hover:opacity-100 duration-300">
-                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
-                <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            <div class="flex relative hover:-translate-y-2 fadeinrightup">
+              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center rounded-lg" src="https://dummyimage.com/602x362">
+              <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 hover:shadow-lg rounded-lg duration-300">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">PROBOLINGGO</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Gunung Bromo</h1>
+                <p class="leading-relaxed">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus nisi architecto quasi, voluptate nam rem explicabo excepturi natus.</p>
               </div>
             </div>
           </div>
           <div class="lg:w-1/3 sm:w-1/2 p-4">
-            <div class="flex relative fadeinup2">
-              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/605x365">
-              <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:shadow-lg hover:opacity-100 duration-300">
+            <div class="flex relative hover:-translate-y-2 fadeinup2">
+              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center rounded-lg" src="https://dummyimage.com/605x365">
+              <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 hover:shadow-lg rounded-lg duration-300">
                 <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
                 <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
-                <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                <p class="leading-relaxed">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus nisi architecto quasi, voluptate nam rem explicabo excepturi natus.</p>
               </div>
             </div>
           </div>
           <div class="lg:w-1/3 sm:w-1/2 p-4">
-            <div class="flex relative fadeinleftup">
-              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/606x366">
-              <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:shadow-lg hover:opacity-100 duration-300">
+            <div class="flex relative hover:-translate-y-2 fadeinleftup">
+              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center rounded-lg" src="https://dummyimage.com/606x366">
+              <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 hover:shadow-lg rounded-lg duration-300">
                 <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
                 <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-                <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                <p class="leading-relaxed">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus nisi architecto quasi, voluptate nam rem explicabo excepturi natus.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </section> -->
+
+    <section class="mb-52">
+
+      <div class="container mx-auto py-10">
+        <h1 class="text-4xl font-bold text-center mb-10">Seamless Marquee with Hover Zoom and Text</h1>
+        
+        <!-- Marquee Container -->
+        <div class="marquee">
+          <!-- Marquee Content -->
+          <div class="marquee-content space-x-6">
+            <!-- Image 1 -->
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://via.placeholder.com/300" alt="Image 1" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Title 1</div>
+                  <div class="overlay-description">Description for Image 1</div>
+                </div>
+              </div>
+            </div>
+            <!-- Image 2 -->
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://via.placeholder.com/301" alt="Image 2" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Title 2</div>
+                  <div class="overlay-description">Description for Image 2</div>
+                </div>
+              </div>
+            </div>
+            <!-- Image 3 -->
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://via.placeholder.com/302" alt="Image 3" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Title 3</div>
+                  <div class="overlay-description">Description for Image 3</div>
+                </div>
+              </div>
+            </div>
+            <!-- Image 4 -->
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://via.placeholder.com/303" alt="Image 4" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Title 4</div>
+                  <div class="overlay-description">Description for Image 4</div>
+                </div>
+              </div>
+            </div>
+            <!-- Image 5 -->
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://via.placeholder.com/304" alt="Image 5" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Title 5</div>
+                  <div class="overlay-description">Description for Image 5</div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Duplicate content for seamless looping -->
+            <!-- Image 1 -->
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://via.placeholder.com/300" alt="Image 1" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Title 1</div>
+                  <div class="overlay-description">Description for Image 1</div>
+                </div>
+              </div>
+            </div>
+            <!-- Image 2 -->
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://via.placeholder.com/301" alt="Image 2" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Title 2</div>
+                  <div class="overlay-description">Description for Image 2</div>
+                </div>
+              </div>
+            </div>
+            <!-- Image 3 -->
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://via.placeholder.com/302" alt="Image 3" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Title 3</div>
+                  <div class="overlay-description">Description for Image 3</div>
+                </div>
+              </div>
+            </div>
+            <!-- Image 4 -->
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://via.placeholder.com/303" alt="Image 4" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Title 4</div>
+                  <div class="overlay-description">Description for Image 4</div>
+                </div>
+              </div>
+            </div>
+            <!-- Image 5 -->
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://via.placeholder.com/304" alt="Image 5" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Title 5</div>
+                  <div class="overlay-description">Description for Image 5</div>
+                </div>
+              </div>
+      
+
+     
+
+      
+
+
+  
+   
+    
+  
+        
+    
+
+  
+       
+    
+      
+
+     
     </section>
+
+
+
+    
 
     <!-- FOOTER --> <!-- FOOTER --> <!-- FOOTER --> <!-- FOOTER -->
 
