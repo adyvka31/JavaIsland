@@ -5,90 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JAVAISLAND | Pulau Jawa | Home</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@500;700&display=swap" rel="stylesheet"/>
-<style>
-   /* Custom animation for seamless marquee */
-   @keyframes marquee {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-
-    /* Marquee animation control */
-    .marquee {
-      display: flex;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-
-    .marquee-content {
-      display: inline-flex;
-      animation: marquee 30s linear infinite;
-    }
-
-    /* Duplicate marquee content to create infinite loop */
-    .marquee-content > div {
-      flex-shrink: 0;
-    }
-
-    /* Stop animation on hover */
-    .marquee:hover .marquee-content {
-      animation-play-state: paused;
-    }
-
-    /* Hover effect */
-    .image-container:hover .overlay {
-      background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
-    }
-
-    .image-container:hover .overlay-text {
-      opacity: 1;
-    }
-
-    .image-container:hover img {
-      transform: scale(1.1); /* Zoom effect */
-    }
-
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0);
-      transition: background-color 0.3s ease;
-    }
-
-    .overlay-text {
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    img {
-      transition: transform 0.3s ease; /* Smooth zoom effect */
-    }
-
-    .overlay-content {
-      text-align: center;
-      color: white;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .overlay-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .overlay-description {
-      font-size: 1rem;
-      margin-top: 0.5rem;
-    }
-    </style>
   </head>
 
   <body class="bg-yellow-50"></body>
@@ -135,7 +54,7 @@
       >
         <div class="text-center mb-28 lg:w-2/3 w-full">
           <h1
-            class="lg:text-7xl md:text-7xl max-[750px]:text-4xl mb-4 font-['dapik'] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] leading-tight font-medium text-white bounce"
+            class="lg:text-7xl md:text-7xl max-[767px]:text-4xl mb-4 font-['dapik'] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] leading-tight font-medium text-white bounce"
           >
             EXPLORE <br />
             <span class="javaisland">JAVAISLAND</span>🏝️ <br/> IN
@@ -172,15 +91,15 @@
 
     <div id="app" class=" w-full h-full container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center items-center mx-auto py-48 pt-60 lg:bg-[url('Images/pulau-jawa1.png')] bg-center bg-contain bg-no-repeat md:bg-none sm:bg-none">
       <img
-        class="absolute bottom-[-21rem] max-[750px]:hidden lg:left-16 md:left-4 w-32 z-20 awankiri"
+        class="absolute bottom-[-21rem] max-[767px]:hidden lg:left-16 md:left-4 w-32 z-20 awankiri"
         src="Images/awan.png"
       />
       <img
-        class="absolute bottom-[-21rem] max-[750px]:hidden lg:right-16 md:right-4 w-32 z-20 awankanan"
+        class="absolute bottom-[-21rem] max-[767px]:hidden lg:right-16 md:right-4 w-32 z-20 awankanan"
         src="Images/awan.png"
       />
       <img
-        class="absolute bottom-[-48rem] max-[750px]:hidden lg:left-[46%] md:left-[43%] md:hidden w-32 z-20 fadeinup2"
+        class="absolute bottom-[-48rem] max-[767px]:hidden lg:left-[46%] md:left-[43%] md:hidden w-32 z-20 fadeinup2"
         src="Images/awan.png"
       />
       <card
@@ -238,7 +157,7 @@
         </p>
       </card>
       <card
-        class="fadeinleftup lg:block md:block max-[750px]:hidden"
+        class="fadeinleftup lg:block md:block max-[767px]:hidden"
         data-image="https://i.pinimg.com/564x/3e/72/e3/3e72e384192f6130cf0d75cfa1611367.jpg"
       >
         <h1 slot="header">Surabaya</h1>
@@ -247,7 +166,7 @@
         </p>
       </card>
       <card
-        class="fadeinleftup lg:block md:hidden max-[750px]:hidden"
+        class="fadeinleftup lg:block md:hidden max-[767px]:hidden"
         data-image="https://i.pinimg.com/564x/90/21/18/902118a87cf0f0f1f75ddfa4a8a8454d.jpg"
       >
         <h1 slot="header">L Bajo</h1>
@@ -261,25 +180,25 @@
 
     <section class="relative bg-[#15B392] shadow-md">
       <div
-        class="container flex flex-col items-center px-4 lg:py-48 md:py-24 max-[750px]:py-12 mx-auto text-center"
+        class="container flex flex-col items-center px-4 lg:py-48 md:py-24 max-[767px]:py-12 mx-auto text-center"
       >
-        <img class="absolute w-28 lg:block md:hidden max-[750px]:hidden top-14 fadeinup2" src="Images/awan2.png" />
+        <img class="absolute w-28 lg:block md:hidden max-[767px]:hidden top-14 fadeinup2" src="Images/awan2.png" />
         <img
-          class="absolute lg:w-72 md:w-40 max-[750px]:w-40 lg:left-32 md:left-10 max-[750px]:static mb-10 fadeinrightup"
+          class="absolute lg:w-72 md:w-40 max-[767px]:w-40 lg:left-32 md:left-10 max-[767px]:static mb-10 fadeinrightup"
           src="Images/wayang-kiri.png"
         />
         <img
-          class="absolute lg:w-72 md:w-40 max-[750px]:w-40 lg:right-3 md:right-10 max-[750px]:hidden fadeinleftup"
+          class="absolute lg:w-72 md:w-40 max-[767px]:w-40 lg:right-3 md:right-10 max-[767px]:hidden fadeinleftup"
           src="Images/wayang-kanan.png"
         />
         <h2
-          class="text-2xl lg:w-2/5 md:w-72 max-[750px]:w-72 font-bold tracking-tight text-white xl:text-3xl fadeinup2"
+          class="text-2xl lg:w-2/5 md:w-72 max-[767px]:w-72 font-bold tracking-tight text-white xl:text-3xl fadeinup2"
         >
         Watch and Witness Several Cultural Events on JavaIsland 🎉!!
         </h2>
 
         <p
-          class="block w-1/3 max-w-4xl max-[750px]:w-80 mt-4 text-gray-200 fadeinup2"
+          class="block w-1/3 max-w-4xl max-[767px]:w-80 mt-4 text-gray-200 fadeinup2"
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum
           dolorem sequi
@@ -298,9 +217,9 @@
     <!-- MAKANAN KHAS --> <!-- MAKANAN KHAS --> <!-- MAKANAN KHAS --> 
 
     <section class="text-gray-600 body-font">
-      <div class="container px-5 py-52 max-[750px]:pt-32 mx-auto">
-        <div class="flex flex-col text-center w-full lg:mb-24 md:mb-12 max-[750px]:mb-12">
-          <h1 class="text-5xl max-[750px]:text-4xl font-extrabold text-gray-900 fadeinup2">Taste <span class="javaisland2">JavaIsland</span> 🍛 Best Food</h1>
+      <div class="container py-52 max-[767px]:pt-32 mx-auto">
+        <div class="flex flex-col text-center w-full lg:mb-24 md:mb-12 max-[767px]:mb-12">
+          <h1 class="text-5xl max-[767px]:text-4xl font-extrabold text-gray-900 fadeinup2">Taste <span class="javaisland2">JavaIsland</span> 🍛 Best Food</h1>
           <p class="lg:w-2/3 mx-auto leading-relaxed text-base fadeinup2">Get Know Our Favorite Food</p>
         </div>
         <div class="container flex flex-wrap px-5 mx-auto items-center">
@@ -338,7 +257,7 @@
               </div>
             </div>
         
-            <div class="cardd rounded-lg fadeinleftup max-[750px]:hidden">
+            <div class="cardd rounded-lg fadeinleftup max-[767px]:hidden">
               <div class="content">
                 <h2 class="title">Lontong Sayur</h2>
                   <p class="copy">
@@ -417,151 +336,285 @@
       </div>
     </section> -->
 
-    <section class="mb-52">
+    <!-- IMAGE CAROUSEL (KANAN) --> 
 
-      <div class="container mx-auto py-10">
-        <h1 class="text-4xl font-bold text-center mb-10">Seamless Marquee with Hover Zoom and Text</h1>
-        
-        <!-- Marquee Container -->
-        <div class="marquee">
-          <!-- Marquee Content -->
-          <div class="marquee-content space-x-6">
-            <!-- Image 1 -->
+    <section class="">
+      <div class="mx-auto py-5">
+        <div class="whitespace-nowrap overflow-hidden carousel">
+          <div class="inline-flex space-x-6 slide-right mr-5 carousel-content">
             <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
-              <img src="https://via.placeholder.com/300" alt="Image 1" class="w-full h-full object-cover">
+              <img src="https://i.pinimg.com/564x/d8/72/d1/d872d1edbf7ef62e9a3a01c419d3857b.jpg" alt="Image 1" class="w-full h-full object-cover">
               <div class="overlay"></div>
               <div class="overlay-text absolute inset-0 flex items-center justify-center">
                 <div class="overlay-content">
-                  <div class="overlay-title">Title 1</div>
+                  <div class="overlay-title">Monas</div>
                   <div class="overlay-description">Description for Image 1</div>
                 </div>
               </div>
             </div>
-            <!-- Image 2 -->
             <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
-              <img src="https://via.placeholder.com/301" alt="Image 2" class="w-full h-full object-cover">
+              <img src="https://i.pinimg.com/564x/03/3a/7b/033a7b5d2c29d1bbe1ec72b94194acf7.jpg" alt="Image 2" class="w-full h-full object-cover">
               <div class="overlay"></div>
               <div class="overlay-text absolute inset-0 flex items-center justify-center">
                 <div class="overlay-content">
-                  <div class="overlay-title">Title 2</div>
+                  <div class="overlay-title">Dufan</div>
                   <div class="overlay-description">Description for Image 2</div>
                 </div>
               </div>
             </div>
-            <!-- Image 3 -->
             <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
-              <img src="https://via.placeholder.com/302" alt="Image 3" class="w-full h-full object-cover">
+              <img src="https://i.pinimg.com/control/564x/95/de/25/95de25608dc0c551e17d04708b79f500.jpg" alt="Image 3" class="w-full h-full object-cover">
               <div class="overlay"></div>
               <div class="overlay-text absolute inset-0 flex items-center justify-center">
                 <div class="overlay-content">
-                  <div class="overlay-title">Title 3</div>
+                  <div class="overlay-title">Sea World</div>
                   <div class="overlay-description">Description for Image 3</div>
                 </div>
               </div>
             </div>
-            <!-- Image 4 -->
             <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
-              <img src="https://via.placeholder.com/303" alt="Image 4" class="w-full h-full object-cover">
+              <img src="https://i.pinimg.com/736x/c2/c8/66/c2c8663f26a58bfa4fdce3a269c2dfe1.jpg" alt="Image 4" class="w-full h-full object-cover">
               <div class="overlay"></div>
               <div class="overlay-text absolute inset-0 flex items-center justify-center">
                 <div class="overlay-content">
-                  <div class="overlay-title">Title 4</div>
+                  <div class="overlay-title">Braga</div>
                   <div class="overlay-description">Description for Image 4</div>
                 </div>
               </div>
             </div>
-            <!-- Image 5 -->
+          </div>
+          <div class="inline-flex space-x-6 slide-right carousel-content">
             <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
-              <img src="https://via.placeholder.com/304" alt="Image 5" class="w-full h-full object-cover">
+              <img src="https://i.pinimg.com/564x/bc/58/e0/bc58e08f448baa3e80615f68acd32f8a.jpg" alt="Image 1" class="w-full h-full object-cover">
               <div class="overlay"></div>
               <div class="overlay-text absolute inset-0 flex items-center justify-center">
                 <div class="overlay-content">
-                  <div class="overlay-title">Title 5</div>
-                  <div class="overlay-description">Description for Image 5</div>
-                </div>
-              </div>
-            </div>
-    
-            <!-- Duplicate content for seamless looping -->
-            <!-- Image 1 -->
-            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
-              <img src="https://via.placeholder.com/300" alt="Image 1" class="w-full h-full object-cover">
-              <div class="overlay"></div>
-              <div class="overlay-text absolute inset-0 flex items-center justify-center">
-                <div class="overlay-content">
-                  <div class="overlay-title">Title 1</div>
+                  <div class="overlay-title">Borobudur</div>
                   <div class="overlay-description">Description for Image 1</div>
                 </div>
               </div>
             </div>
-            <!-- Image 2 -->
             <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
-              <img src="https://via.placeholder.com/301" alt="Image 2" class="w-full h-full object-cover">
+              <img src="https://i.pinimg.com/736x/82/97/2b/82972ba6633850d902416f2f45b33eb7.jpg" alt="Image 2" class="w-full h-full object-cover">
               <div class="overlay"></div>
               <div class="overlay-text absolute inset-0 flex items-center justify-center">
                 <div class="overlay-content">
-                  <div class="overlay-title">Title 2</div>
+                  <div class="overlay-title">Scienta</div>
                   <div class="overlay-description">Description for Image 2</div>
                 </div>
               </div>
             </div>
-            <!-- Image 3 -->
             <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
-              <img src="https://via.placeholder.com/302" alt="Image 3" class="w-full h-full object-cover">
+              <img src="https://i.pinimg.com/736x/47/09/fa/4709fafb74fd07ac03c45fbafd42bb45.jpg" alt="Image 3" class="w-full h-full object-cover">
               <div class="overlay"></div>
               <div class="overlay-text absolute inset-0 flex items-center justify-center">
                 <div class="overlay-content">
-                  <div class="overlay-title">Title 3</div>
+                  <div class="overlay-title">Taman Safari</div>
                   <div class="overlay-description">Description for Image 3</div>
                 </div>
               </div>
             </div>
-            <!-- Image 4 -->
             <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
-              <img src="https://via.placeholder.com/303" alt="Image 4" class="w-full h-full object-cover">
+              <img src="https://i.pinimg.com/564x/9e/e4/5a/9ee45a99559cf29d7f2da1ee0dd79dd7.jpg" alt="Image 4" class="w-full h-full object-cover">
               <div class="overlay"></div>
               <div class="overlay-text absolute inset-0 flex items-center justify-center">
                 <div class="overlay-content">
-                  <div class="overlay-title">Title 4</div>
+                  <div class="overlay-title">Taman Bunga</div>
                   <div class="overlay-description">Description for Image 4</div>
                 </div>
               </div>
             </div>
-            <!-- Image 5 -->
-            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
-              <img src="https://via.placeholder.com/304" alt="Image 5" class="w-full h-full object-cover">
-              <div class="overlay"></div>
-              <div class="overlay-text absolute inset-0 flex items-center justify-center">
-                <div class="overlay-content">
-                  <div class="overlay-title">Title 5</div>
-                  <div class="overlay-description">Description for Image 5</div>
-                </div>
-              </div>
-      
-
-     
-
-      
-
-
-  
-   
-    
-  
-        
-    
-
-  
-       
-    
-      
-
-     
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- IMAGE CAROUSEL (KIRI) -->
 
+    <section class="">
+      <div class="mx-auto py-5">
+        <div class="whitespace-nowrap overflow-hidden carousel flex flex-row-reverse">
+          <div class="inline-flex space-x-6 slide-left ml-5 carousel-content">
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://i.pinimg.com/736x/47/09/fa/4709fafb74fd07ac03c45fbafd42bb45.jpg" alt="Image 1" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Taman Safari</div>
+                  <div class="overlay-description">Description for Image 1</div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://i.pinimg.com/564x/bc/58/e0/bc58e08f448baa3e80615f68acd32f8a.jpg" alt="Image 2" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Borobudur</div>
+                  <div class="overlay-description">Description for Image 2</div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://i.pinimg.com/564x/9e/e4/5a/9ee45a99559cf29d7f2da1ee0dd79dd7.jpg" alt="Image 3" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Bunga</div>
+                  <div class="overlay-description">Description for Image 3</div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://i.pinimg.com/564x/2c/3a/16/2c3a169cfe30ed979d88c6b4800073c0.jpg" alt="Image 4" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Menteng</div>
+                  <div class="overlay-description">Description for Image 4</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="inline-flex space-x-6 slide-left carousel-content">
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://i.pinimg.com/564x/01/12/c1/0112c1fdc7d0b96926573383d8c3519d.jpg" alt="Image 1" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Tumpak Sewu</div>
+                  <div class="overlay-description">Description for Image 1</div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://i.pinimg.com/736x/82/97/2b/82972ba6633850d902416f2f45b33eb7.jpg" alt="Image 2" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Scienta</div>
+                  <div class="overlay-description">Description for Image 2</div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://i.pinimg.com/736x/9e/43/2b/9e432b85db7b0ada30f52b613360b27e.jpg" alt="Image 3" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Pantai Bentar
+                  </div>
+                  <div class="overlay-description">Description for Image 3</div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://i.pinimg.com/736x/cf/65/ac/cf65ac2381953cfe4f2dc1dfcb8f6937.jpg" alt="Image 4" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Merbabu</div>
+                  <div class="overlay-description">Description for Image 4</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    
+    <!-- IMAGE CAROUSEL (KANAN) -->
+
+    <section class="">
+      <div class=" mx-auto py-5 mb-52">
+        <div class="whitespace-nowrap overflow-hidden carousel">
+          <div class="inline-flex space-x-6 slide-right mr-5 carousel-content">
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://i.pinimg.com/736x/82/97/2b/82972ba6633850d902416f2f45b33eb7.jpg" alt="Image 1" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Scienta</div>
+                  <div class="overlay-description">Description for Image 1</div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://i.pinimg.com/564x/01/12/c1/0112c1fdc7d0b96926573383d8c3519d.jpg" alt="Image 2" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Tumpak Sewu</div>
+                  <div class="overlay-description">Description for Image 2</div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://i.pinimg.com/564x/9e/e4/5a/9ee45a99559cf29d7f2da1ee0dd79dd7.jpg" alt="Image 3" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Taman Bunga</div>
+                  <div class="overlay-description">Description for Image 3</div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://i.pinimg.com/564x/2c/3a/16/2c3a169cfe30ed979d88c6b4800073c0.jpg" alt="Image 4" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Menteng</div>
+                  <div class="overlay-description">Description for Image 4</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="inline-flex space-x-6 slide-right carousel-content">
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://i.pinimg.com/564x/03/3a/7b/033a7b5d2c29d1bbe1ec72b94194acf7.jpg" alt="Image 1" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Dufan</div>
+                  <div class="overlay-description">Description for Image 1</div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://i.pinimg.com/control/564x/95/de/25/95de25608dc0c551e17d04708b79f500.jpg" alt="Image 2" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Sea World</div>
+                  <div class="overlay-description">Description for Image 2</div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://i.pinimg.com/564x/d8/72/d1/d872d1edbf7ef62e9a3a01c419d3857b.jpg" alt="Image 3" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Monas</div>
+                  <div class="overlay-description">Description for Image 3</div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container relative w-64 h-40 rounded-lg shadow-lg overflow-hidden">
+              <img src="https://i.pinimg.com/736x/c2/c8/66/c2c8663f26a58bfa4fdce3a269c2dfe1.jpg" alt="Image 4" class="w-full h-full object-cover">
+              <div class="overlay"></div>
+              <div class="overlay-text absolute inset-0 flex items-center justify-center">
+                <div class="overlay-content">
+                  <div class="overlay-title">Braga</div>
+                  <div class="overlay-description">Description for Image 4</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER --> <!-- FOOTER --> <!-- FOOTER --> <!-- FOOTER -->
 
