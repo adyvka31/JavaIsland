@@ -24,6 +24,7 @@ body {
     background-color: #15B392;
     color: white;
     text-align: left;
+    font-weight: bold;
   }
 
   .chat-incoming p {
@@ -37,6 +38,7 @@ body {
     background-color: #e0e0e0;
     color: black;
     text-align: left;
+    line-height: 25px;
   }
   
   #cross {
