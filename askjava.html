@@ -52,16 +52,24 @@
     <!-- AI -->
 
     <section class="my-52 relative">
-      <div class="chatBot border-4 border-solid border-[#15B392] shadow-2xl w-[800px] h-auto rounded-xl items-center justify-center mx-auto bg-white list-none">
+      <img
+        class="absolute bottom-[31rem] max-[767px]:hidden lg:left-60 md:left-4 w-32 z-20 fadeinright"
+        src="Images/awan.png"
+      />
+      <img
+        class="absolute bottom-[31rem] max-[767px]:hidden lg:right-60 md:right-4 w-32 z-20 fadeinleft"
+        src="Images/awan.png"
+      />
+      <div class="chatBot border-4 border-solid border-[#15B392] shadow-2xl w-[800px] h-auto rounded-xl items-center justify-center mx-auto bg-white list-none fadeindown">
           <header class="bg-[#15B392] text-center py-3 rounded-t-lg">
               <h2 class="text-xl text-white font-semibold">AI JavaIsland</h2>
           </header>
-          <ul class="chatbox h-[450px] overflow-y-auto none">
+          <ul class="chatbox h-[450px] overflow-y-auto">
               <li class="chat-incoming chat items-center justify-center mx-auto h-8 w-80 rounded-3xl mt-4 mb-10">
                   <h2 class="text-center py-1">Hey! How can I assist you today?</h2>
               </li>
           </ul>
-          <div class="flex chat-input bg-[#15B392] w-full h-20 rounded-b-lg py-5 px-3">
+          <div class="flex chat-input bg-[#15B392] w-full h-20 rounded-b-lg py-5 px-5">
               <textarea class="w-[90%] rounded-l-full px-5 py-2.5 border border-gray-300" rows="0" cols="17" placeholder="Apa Yang Ingin Ditanyakan?"></textarea>
               <button class="w-[10%] bg-[#D2FF72] rounded-r-full hover:bg-[#a8e300] transition duration-300" id="sendBTN">Send</button>
           </div>
