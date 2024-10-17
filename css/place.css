@@ -20,7 +20,7 @@ body {
 }
 
 .bg-guide{
-  background-image: linear-gradient(rgba(21, 179, 146, 0.90), rgba(21, 179, 146, 0.90)), url(Images/bg-guide.jpg);
+  background-image: linear-gradient(rgba(21, 179, 146, 0.90), rgba(21, 179, 146, 0.90)), url(https://img.freepik.com/free-photo/indonesia-landscape-digital-art_23-2151625227.jpg?t=st=1729147290~exp=1729150890~hmac=a3fdbbecc33a2148d9e0980631eca10c65fabb650c41ea591203c357d9243dec&w=1800);
   background-size: cover;
   background-position: center;
 }
