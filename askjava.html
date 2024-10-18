@@ -269,103 +269,113 @@
 
     <script>
       const chatInput = document.querySelector(".chat-input textarea");
-      const sendChatBtn = document.querySelector(".chat-input button");
-      const chatbox = document.querySelector(".chatbox");
+const sendChatBtn = document.querySelector(".chat-input button");
+const chatbox = document.querySelector(".chatbox");
 
-      let userMessage;
-      const API_KEY = "AIzaSyCuwiQEUm3fSu3sVXpwbeB4_nHmwS104_s";
+let userMessage;
+const API_KEY = "AIzaSyCuwiQEUm3fSu3sVXpwbeB4_nHmwS104_s";
 
-      //OpenAI Free APIKey
+const allowedKeywords = ["Jawa", "budaya", "candi", "pantai", "gunung", "keraton", "air terjun", "kawah", "wisata", "desa", "kuliner", "bahasa",
+                        "java", "culture", "temple", "beach", "mountain", "palace", "waterfall", "crater", "tourism", "village", "culinary", "language"];
 
-      const createChatLi = (message, className) => {
-        const chatLi = document.createElement("li");
-        chatLi.classList.add("chat", className);
-        let chatContent =
-          className === "chat-outgoing"
-            ? `<p>${message}</p>`
-            : `<p>${message}</p>`;
-        chatLi.innerHTML = chatContent;
-        return chatLi;
-      };
+const createChatLi = (message, className) => {
+  const chatLi = document.createElement("li");
+  chatLi.classList.add("chat", className);
+  let chatContent =
+    className === "chat-outgoing"
+      ? `<p>${message}</p>`
+      : `<p>${message}</p>`;
+  chatLi.innerHTML = chatContent;
+  return chatLi;
+};
 
-      const generateResponse = (incomingChatLi) => {
-        const API_URL =
-          "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCuwiQEUm3fSu3sVXpwbeB4_nHmwS104_s";
-        const messageElement = incomingChatLi.querySelector("p");
+const isKeywordAllowed = (message) => {
+  return allowedKeywords.some(keyword => message.toLowerCase().includes(keyword.toLowerCase()));
+};
 
-        const requestOptions = {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            contents: [{ parts: [{ text: userMessage }] }],
-          }),
-        };
+const generateResponse = (incomingChatLi) => {
+  const API_URL =
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=" + API_KEY;
+  const messageElement = incomingChatLi.querySelector("p");
 
-        fetch(API_URL, requestOptions)
-          .then((res) => {
-            if (!res.ok) {
-              throw new Error("Network response was not ok");
-            }
-            return res.json();
-          })
-          .then((data) => {
-            console.log(data);
-            if (data.candidates[0].length > 0) {
-              messageElement.textContent = data.choices[0].message.content;
-            } else {
-              // Handle case where the API doesn't provide a suitable response
-              messageElement.classList.add("unclear");
-              messageElement.textContent =
-                data.candidates[0].content.parts[0].text;
-              // "Hmm, I'm not sure I understand your question. Can you rephrase it?";
-            }
-          })
-          .catch((error) => {
-            messageElement.classList.add("error");
-            messageElement.textContent =
-              "Oops! Something went wrong. Please try again later.";
-            console.error("Error generating response:", error);
-          })
-          .finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
-      };
+  const requestOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      contents: [{ parts: [{ text: userMessage }] }],
+    }),
+  };
 
-      chatInput.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") {
-          handleChat();
-          chatInput.value = ""; // clear the text area
-        }
-      });
-
-      const handleChat = () => {
-        userMessage = chatInput.value.trim();
-        if (!userMessage) {
-          return;
-        }
-        chatbox.appendChild(createChatLi(userMessage, "chat-outgoing"));
-        chatbox.scrollTo(0, chatbox.scrollHeight);
-
-        setTimeout(() => {
-          const incomingChatLi = createChatLi("Thinking...", "chat-incoming");
-          chatbox.appendChild(incomingChatLi);
-          chatbox.scrollTo(0, chatbox.scrollHeight);
-          generateResponse(incomingChatLi);
-        }, 600);
-      };
-
-      sendChatBtn.addEventListener("click", handleChat);
-
-      function cancel() {
-        let chatbotcomplete = document.querySelector(".chatBot");
-        if (chatbotcomplete.style.display != "none") {
-          chatbotcomplete.style.display = "none";
-          let lastMsg = document.createElement("p");
-          lastMsg.textContent = "Thanks for using our Chatbot!";
-          lastMsg.classList.add("lastMessage");
-          document.body.appendChild(lastMsg);
-        }
+  fetch(API_URL, requestOptions)
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Network response was not ok");
       }
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data);
+      if (data.candidates[0].length > 0) {
+        messageElement.textContent = data.choices[0].message.content;
+      } else {
+        messageElement.classList.add("unclear");
+        messageElement.textContent = data.candidates[0].content.parts[0].text;
+      }
+    })
+    .catch((error) => {
+      messageElement.classList.add("error");
+      messageElement.textContent =
+        "Oops! Something went wrong. Please try again later.";
+      console.error("Error generating response:", error);
+    })
+    .finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
+};
+
+chatInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    handleChat();
+    chatInput.value = "";
+  }
+});
+
+const handleChat = () => {
+  userMessage = chatInput.value.trim();
+  if (!userMessage) {
+    return;
+  }
+
+  if (!isKeywordAllowed(userMessage)) {
+    chatbox.appendChild(createChatLi("Mohon maaf kami tidak bersedia untuk menjawab hal tersebut. Mohon bertanya tentang Jawa.", "chat-incoming"));
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+    return;
+  }
+
+  chatbox.appendChild(createChatLi(userMessage, "chat-outgoing"));
+  chatbox.scrollTo(0, chatbox.scrollHeight);
+
+  setTimeout(() => {
+    const incomingChatLi = createChatLi("Thinking...", "chat-incoming");
+    chatbox.appendChild(incomingChatLi);
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+    generateResponse(incomingChatLi);
+  }, 600);
+};
+
+sendChatBtn.addEventListener("click", handleChat);
+
+function cancel() {
+  let chatbotcomplete = document.querySelector(".chatBot");
+  if (chatbotcomplete.style.display != "none") {
+    chatbotcomplete.style.display = "none";
+    let lastMsg = document.createElement("p");
+    lastMsg.textContent = "Thanks for using our Chatbot!";
+    lastMsg.classList.add("lastMessage");
+    document.body.appendChild(lastMsg);
+  }
+}
+
     </script>
   </body>
 </html>

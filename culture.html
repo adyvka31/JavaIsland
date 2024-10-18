@@ -59,6 +59,95 @@
         animation-range: entry 0% cover 20%;
       }
 
+      .gege{
+        transition: transform .2s
+      }
+      .gege:hover{
+        transform: scale(1.1);
+      }
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .marquee{
+          justify-content: center;
+          align-items: center;
+        }
+
+
+
+        .parallax {
+            background-image: url('/background-hero\ \(1\).png'); /* Ganti dengan URL gambar latar belakang Anda */
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+       
+
+        .zoom-in {
+            animation: zoomIn 1s ease-in forwards;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* Tooltip styles */
+        
+        .image-container:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Click Me animation */
+        .click-me {
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .image-container:hover .click-me {
+            opacity: 1;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        /* Gambar dengan ukuran tetap */
+        .fixed-size {
+            width: 400px; /* Ukuran yang sama untuk semua gambar */
+            height: 350px; /* Ukuran yang sama untuk semua gambar */
+            object-fit: cover; /* Mengatur cara gambar ditampilkan */
+            border-radius: 1rem; /* Sudut lengkung */
+        }
+
       @keyframes slide-right {
         0% {
           transform: translateX(0);
@@ -170,6 +259,165 @@
       </div>
     </nav>
 
+    <section class="parallax">
+      <div class="fade-in">
+          <h1 class="text-5xl font-bold mb-4">Discover the Rich Culture of Java</h1>
+          <p class="text-lg mb-8">Explore the vibrant traditions, arts, and history of one of Indonesia's most iconic islands.</p>
+          <button class="bg-yellow-500 text-white py-2 px-4 rounded-full hover:bg-yellow-600 transition duration-300">
+              Start Your Journey
+          </button>
+      </div>
+  </section>
+
+  <section class="py-16 bg-white text-center ">
+    <h2 class="text-3xl font-bold mb-6">A Glimpse into Java’s History</h2>
+    <p class="max-w-2xl mx-auto text-lg mb-6">Discover the historical journey of Java from its ancient Hindu-Buddha
+        empires to the Dutch colonial period.</p>
+    <div class="marquee">
+        <div class="flex marquee">
+            <div class="relative image-container mr-4 p-3 ">
+                <img src="https://img.freepik.com/free-photo/famous-borobudur-temple-mungkid-indonesia_181624-15041.jpg?t=st=1729236247~exp=1729239847~hmac=31991834dc87628336a12f7975152bf19ac2372d4d60df2a04cd511a10cd1de9&w=2000" alt="Candi Borobudur" class="fixed-size rounded-lg zoom-in cursor-pointer"
+                    onclick="openModal('Borobudur', 'Candi Borobudur adalah candi Buddha yang terkenal di dunia, terletak di Jawa Tengah. Gambar ini menunjukkan kemegahan arsitekturnya.', 'https://img.freepik.com/free-photo/famous-borobudur-temple-mungkid-indonesia_181624-15041.jpg?t=st=1729236247~exp=1729239847~hmac=31991834dc87628336a12f7975152bf19ac2372d4d60df2a04cd511a10cd1de9&w=200')">
+                <span class="tooltip">Candi Borobudur</span>
+               
+            </div>
+            <div class="relative image-container mr-4">
+                <img src="https://i.pinimg.com/564x/9f/50/c5/9f50c5e2160d0de02fb9ee0cbcd2864a.jpg" alt="Wayang Kulit" class="fixed-size rounded-lg zoom-in cursor-pointer"
+                    onclick="openModal('Wayang Kulit', 'Wayang kulit adalah seni pertunjukan bayangan yang berasal dari Indonesia. Ini adalah salah satu bentuk kesenian yang paling terkenal di Jawa.', 'https://i.pinimg.com/564x/9f/50/c5/9f50c5e2160d0de02fb9ee0cbcd2864a.jpg')">
+                <span class="tooltip">Wayang Kulit</span>
+              
+            </div>
+            <div class="relative image-container mr-4">
+                <img src="https://i.pinimg.com/564x/f0/9f/4e/f09f4eb71703ed9f7947c1cf70800df9.jpg" alt="Gamelan" class="fixed-size rounded-lg zoom-in cursor-pointer"
+                    onclick="openModal('Gamelan', 'Gamelan adalah ansambel musik tradisional yang biasanya terdiri dari instrumen perkusi dan alat musik lainnya.', 'https://i.pinimg.com/564x/f0/9f/4e/f09f4eb71703ed9f7947c1cf70800df9.jpg')">
+                <span class="tooltip">Gamelan</span>
+        
+            </div>
+            <div class="relative image-container">
+                <img src="https://i.pinimg.com/control/564x/c9/01/94/c9019418bda82b092a544d27165bb82c.jpg" alt="Batik" class="fixed-size rounded-lg zoom-in cursor-pointer"
+                    onclick="openModal('Batik', 'Batik adalah teknik pewarnaan kain yang sangat terkenal di Indonesia, terutama di Jawa. Desainnya yang rumit menjadi daya tarik tersendiri.', 'https://i.pinimg.com/control/564x/c9/01/94/c9019418bda82b092a544d27165bb82c.jpg')">
+                <span class="tooltip">Batik</span>
+        
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <section class="py-16 bg-gray-100 text-center">
+    <h2 class="text-4xl font-bold mb-10">The Story of Java’s Cultural Heritage</h2>
+  
+    <p class="max-w-4xl mx-auto text-lg mb-10">
+        Java is an island rich in history, where culture and tradition have flourished for centuries. From the rise of powerful kingdoms to the influence of colonial powers, the cultural landscape of Java has been shaped by many forces.
+        Let’s journey back through time and explore the heart of Javanese culture.
+    </p>
+  
+  </section>
+  
+    <!-- Narasi 1: Kerajaan Majapahit -->
+    <div class="flex items-center justify-between py-10 px-6 bg-white shadow-lg rounded-lg mb-10">
+        <div class="w-1/2 text-left pr-6">
+            <h3 class="text-2xl font-bold mb-4">The Majapahit Kingdom</h3>
+            <p class="text-lg">
+                In the 13th century, the Majapahit Kingdom rose to power, becoming one of the most influential empires in Southeast Asia. Its rulers were patrons of art, literature, and culture, which played a significant role in shaping Javanese traditions. 
+                The kingdom’s influence is still felt today, especially in the arts of wayang kulit and gamelan.
+            </p>
+        </div>
+        <div class="w-1/2 relative">
+            <img src="https://i.pinimg.com/564x/7e/60/65/7e606503736772efb2a346e7e560075c.jpg" alt="Majapahit Kingdom" class="fixed-size rounded-lg hover:scale-105 transition-transform cursor-pointer" 
+                onclick="openModal('Majapahit Kingdom', 'The Majapahit Kingdom was a powerful empire that significantly influenced the cultural heritage of Java.', 'https://i.pinimg.com/564x/7e/60/65/7e606503736772efb2a346e7e560075c.jpg')">
+    
+        </div>
+    </div>
+  
+    <!-- Narasi 2: Keraton dan Kesultanan -->
+    <div class="flex items-center justify-between py-10 px-6 bg-white shadow-lg rounded-lg mb-10 flex-row-reverse">
+        <div class="w-1/2 text-left  pl-">
+            <h3 class="text-2xl font-bold mb-4">The Javanese Sultanates</h3>
+            <p class="text-lg">
+                The royal palaces, or "keraton," of Java are more than just symbols of power. They are the heart of Javanese cultural preservation. The Sultanate of Yogyakarta, for example, has played a crucial role in keeping ancient traditions, such as batik-making and gamelan music, alive.
+            </p>
+        </div>
+        <div class="w-1/2 relative">
+            <img src="https://i.pinimg.com/564x/d6/47/8b/d6478b7f190896af4eba405895c386d7.jpg" alt="Sultan of Yogyakarta" class="fixed-size rounded-lg hover:scale-105 transition-transform cursor-pointer" 
+                onclick="openModal('Sultan of Yogyakarta', 'The Sultanate of Yogyakarta is known for preserving Javanese traditions and cultural heritage.', 'https://i.pinimg.com/564x/d6/47/8b/d6478b7f190896af4eba405895c386d7.jpg')">
+    
+        </div>
+    </div>
+  
+
+  <!-- Section 1: Sejarah Jawa -->
+ 
+  
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+          <div class="flex w-full mb-20 flex-wrap">
+            <h1 class="text-4xl font-bold mb-10">Discover the Rich Culture of Java</h1>
+  
+
+            </p>
+          </div>
+          <div class="flex flex-wrap md:-m-2 -m-1">
+            <div class="flex flex-wrap w-1/2">
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="gege w-full object-cover h-full object-center block" src="https://i.pinimg.com/564x/9c/9d/8c/9c9d8cf5b1ffca377b9adb4b9f059ed7.jpg">
+              </div>
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="gege w-full object-cover h-full object-center block" src="https://i.pinimg.com/564x/f0/9f/4e/f09f4eb71703ed9f7947c1cf70800df9.jpg">
+              </div>
+              <div class="md:p-2 p-1 w-full">
+                <img alt="gallery" class="gege w-full h-full object-cover object-center block" src="/famous-borobudur-temple-mungkid-indonesia.jpg">
+              </div>
+            </div>
+            <div class="flex flex-wrap w-1/2">
+              <div class="md:p-2 p-1 w-full">
+                <img alt="gallery" class="gege w-full h-full object-cover object-center block" src="https://i0.wp.com/fahum.umsu.ac.id/wp-content/uploads/2024/02/Sejarah-Candi-Prambanan-serta-Fungsinya.jpg?fit=1366%2C768&ssl=1">
+              </div>
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="gege w-full object-cover h-full object-center block" src="https://i.pinimg.com/control/564x/40/ca/70/40ca705f8f0dc0cd113d00b16c1d4207.jpg">
+              </div>
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="gege w-full object-cover h-full object-center block" src="https://i.pinimg.com/564x/68/f0/86/68f0866b92af1c821d2f4b0f2bd4c8fe.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Seni dan Budaya -->
+  <section class=" bg-gray-100 text-center">
+    <h2 class="text-3xl font-bold mb-6">The Vibrant Arts and Traditions</h2>
+    <p class="max-w-2xl mx-auto text-lg mb-6">Explore traditional arts such as wayang kulit, gamelan, and batik
+        that form an integral part of Javanese culture.</p>
+    <div class="marquee">
+        <div class="flex justify-center space-x-8">
+            <div class="relative image-container">
+                <img src="https://i.pinimg.com/564x/9f/50/c5/9f50c5e2160d0de02fb9ee0cbcd2864a.jpg" alt="Wayang Kulit" class="fixed-size rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                    onclick="openModal('Wayang Kulit', 'Wayang kulit adalah seni pertunjukan bayangan yang berasal dari Indonesia. Ini adalah salah satu bentuk kesenian yang paling terkenal di Jawa.', 'https://i.pinimg.com/564x/9f/50/c5/9f50c5e2160d0de02fb9ee0cbcd2864a.jpg')">
+                <span class="tooltip">Wayang Kulit</span>
+        
+            </div>
+            <div class="relative image-container">
+                <img src="https://i.pinimg.com/564x/f0/9f/4e/f09f4eb71703ed9f7947c1cf70800df9.jpg" alt="Gamelan" class="fixed-size rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                    onclick="openModal('Gamelan', 'Gamelan adalah ansambel musik tradisional yang biasanya terdiri dari instrumen perkusi dan alat musik lainnya.', 'https://i.pinimg.com/564x/f0/9f/4e/f09f4eb71703ed9f7947c1cf70800df9.jpg')">
+                <span class="tooltip">Gamelan</span>
+        
+            </div>
+        </div>
+    </div>
+    <section class="text-gray-600 body-font">
+  
+
+<!-- Modal -->
+<div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center">
+    <div class="bg-white rounded-lg p-6 max-w-md mx-auto">
+        <h2 id="modal-title" class="text-xl font-bold mb-2"></h2>
+        <img id="modal-image" class="w-full rounded-lg mb-4" src="" alt="">
+        <p id="modal-description" class="text-gray-700"></p>
+        <button onclick="closeModal()"
+            class="mt-4 bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition duration-300">Close</button>
+    </div>
+</div>
+
     <footer class="bg-[#15B392]">
       <div class="container px-6 py-8 mx-auto">
         <div class="flex flex-col items-center text-center">
@@ -238,5 +486,18 @@
         </div>
       </div>
     </footer>
+
+    <script>
+       function openModal(title, description, imageUrl) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-description').innerText = description;
+            document.getElementById('modal-image').src = imageUrl;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+    </script>
   </body>
 </html>

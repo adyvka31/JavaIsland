@@ -15,10 +15,32 @@
         font-family: "Raleway";
         font-size: 14px;
         font-weight: 500;
-        background-color: #bcaaa4;
+        background-color: #BCAAA4;
         -webkit-font-smoothing: antialiased;
         place-items: center;
       }
+      .fadeinup{
+      animation: fadeInUp 1s ease-in-out forwards;
+}
+    .fadeinup2{
+      animation: fadeInUp linear;
+      transition: 0.3s ease-in-out;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+      }
+      @keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(70px);
+      visibility: visible;
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+  }
+}
     </style>
   </head>
   <body class="bg-yellow-50">
@@ -63,7 +85,7 @@
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-52 mx-auto flex flex-col">
         <div class="lg:w-4/6 mx-auto">
-          <div class="rounded-lg h-64 overflow-hidden">
+          <div class="rounded-lg h-64 overflow-hidden fadeinup">
             <img
               alt="content"
               class="object-cover object-center h-full w-full"
@@ -72,7 +94,7 @@
           </div>
           <div class="flex flex-col sm:flex-row mt-10">
             <div class="w-full mt-4 text-center sm:text-left">
-              <p class="leading-relaxed text-lg mb-4">
+              <p class="leading-relaxed text-lg mb-4 fadeinup">
                 Wayang kulit (Javanese: ꦮꦪꦁꦏꦸꦭꦶꦠ꧀) is a traditional form of
                 wayang art originally found in Javanese and Balinese cultures in
                 Indonesia.[1] Wayang kulit narratives often deal with the
@@ -82,7 +104,7 @@
           </div>
           <div class="flex flex-col sm:flex-row mt-10">
             <div class="w-full mt-4 text-center sm:text-left">
-              <p class="leading-relaxed text-lg mb-4">
+              <p class="leading-relaxed text-lg mb-4 fadeinup">
                 In Javanese beliefs and literature, wayang kulit was created by
                 Kanjeng Sunan Kalijaga who was a member of Wali Songo and a
                 descendant of the Ponorogo nobility, Arya Wiraraja. Kanjeng
@@ -101,7 +123,7 @@
           </div>
           <div class="flex flex-col sm:flex-row my-10">
             <div class="w-full mt-4 text-center sm:text-left">
-              <p class="leading-relaxed text-lg mb-4">
+              <p class="leading-relaxed text-lg mb-4 fadeinup2">
                 The art of puppetry, especially wayang, is thought to have been
                 born in Indonesia during the reign of Airlangga, who ruled the
                 Kahuripan kingdom (976-1012). Javanese literary works that
@@ -121,7 +143,7 @@
               </p>
             </div>
           </div>
-          <div class="rounded-lg h-64 overflow-hidden">
+          <div class="rounded-lg h-64 overflow-hidden fadeinup2">
             <img
               alt="content"
               class="object-cover object-center h-full w-full"
@@ -130,7 +152,7 @@
           </div>
           <div class="flex flex-col sm:flex-row my-10">
             <div class="w-full mt-4 text-center sm:text-left">
-              <p class="leading-relaxed text-lg mb-4">
+              <p class="leading-relaxed text-lg mb-4 fadeinup2">
                 Wayang comes from the word "Ma Hyang" which means to go to the
                 spiritual spirit, god, or God Almighty. There are also those who
                 interpret wayang as a Javanese term meaning "shadow", this is
@@ -151,7 +173,7 @@
           </div>
           <div class="flex flex-col sm:flex-row my-10">
             <div class="w-full mt-4 text-center sm:text-left">
-              <p class="leading-relaxed text-lg mb-4">
+              <p class="leading-relaxed text-lg mb-4 fadeinup2">
                 In general, wayang takes stories from the Mahabharata and
                 Ramayana scripts, but is not limited to just those standards,
                 the puppeteer can also play carangan (composition) plays. Some
