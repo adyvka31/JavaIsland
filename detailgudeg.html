@@ -16,6 +16,28 @@
           -webkit-font-smoothing: antialiased;
           place-items: center;
         }
+        .fadeinup{
+    animation: fadeInDown 1s ease-in-out forwards;
+}
+.fadeinup2{
+  animation: fadeInUp linear;
+  transition: 0.3s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+        @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(70px);
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
       </style>
 </head>
 <body class="bg-yellow-50">
@@ -54,21 +76,21 @@
         <div class="container px-5 py-52 mx-auto flex flex-col">
           <div class="lg:w-4/6 mx-auto">
             <div class="rounded-lg h-64 overflow-hidden">
-              <img alt="content" class="object-cover object-center h-full w-full" src="https://i.pinimg.com/564x/06/6f/b4/066fb44d243aea3577d50a43ca3c20f8.jpg">
+              <img alt="content" class="object-cover object-center h-full w-full fadeinup" src="https://i.pinimg.com/564x/06/6f/b4/066fb44d243aea3577d50a43ca3c20f8.jpg">
             </div>
             <div class="flex flex-col sm:flex-row mt-10">
               <div class="w-full mt-4 text-center sm:text-left">
-                <p class="leading-relaxed text-lg mb-4">Gudeg is made from jackfruit which grows on many islands in Indonesia, especially in Java, and is a fairly important food crop. A large number of certain spices and herbs are used in the boiling process, these herbs also increase the shelf life of gudeg.</p>
+                <p class="leading-relaxed text-lg mb-4 fadeinup">Gudeg is made from jackfruit which grows on many islands in Indonesia, especially in Java, and is a fairly important food crop. A large number of certain spices and herbs are used in the boiling process, these herbs also increase the shelf life of gudeg.</p>
               </div>
             </div>
             <div class="flex flex-col sm:flex-row mt-10">
                 <div class="w-full mt-4 text-center sm:text-left">
-                  <p class="leading-relaxed text-lg mb-4">In Central Java, there is a legend that links the origin of gudeg with the establishment of the Mataram Sultanate in the late 16th century. It is said that at that time, warriors who cleared the forest for the construction of the new capital city in the current Yogyakarta area did not get adequate food supplies. Meanwhile, only jackfruit and coconut trees grew abundantly in the forest. When the young jackfruit was hard and could not be eaten raw, they boiled the young jackfruit in coconut milk in a large metal pan and stirred it with a wooden board. This cooking process in everyday Javanese is called hangudêk (jw. Hangudek)—"stirring". According to legend, this word is the origin of the name of the food discovered by the Mataram soldiers, "Gudeg".[3]</p>
+                  <p class="leading-relaxed text-lg mb-4 fadeinup2">In Central Java, there is a legend that links the origin of gudeg with the establishment of the Mataram Sultanate in the late 16th century. It is said that at that time, warriors who cleared the forest for the construction of the new capital city in the current Yogyakarta area did not get adequate food supplies. Meanwhile, only jackfruit and coconut trees grew abundantly in the forest. When the young jackfruit was hard and could not be eaten raw, they boiled the young jackfruit in coconut milk in a large metal pan and stirred it with a wooden board. This cooking process in everyday Javanese is called hangudêk (jw. Hangudek)—"stirring". According to legend, this word is the origin of the name of the food discovered by the Mataram soldiers, "Gudeg".[3]</p>
                 </div>
             </div>
             <div class="flex flex-col sm:flex-row my-10">
                 <div class="w-full mt-4 text-center sm:text-left">
-                  <p class="leading-relaxed text-lg mb-4">Gudeg is made from unripe jackfruit flesh. Unlike ripe jackfruit flesh, which is soft, bright yellow, oily, and very sweet, unripe jackfruit has a dense and somewhat dry consistency, is gummy, whitish or light cream in color, and cannot be eaten raw. After the skin is peeled, young jackfruit is cut into small pieces and boiled first in boiling water until soft. After that, the jackfruit pieces are poured with coconut milk—often mixed with coconut water, seasoned with certain spices and boiled for a long time—usually for 4-6 hours.</p>
+                  <p class="leading-relaxed text-lg mb-4 fadeinup2">Gudeg is made from unripe jackfruit flesh. Unlike ripe jackfruit flesh, which is soft, bright yellow, oily, and very sweet, unripe jackfruit has a dense and somewhat dry consistency, is gummy, whitish or light cream in color, and cannot be eaten raw. After the skin is peeled, young jackfruit is cut into small pieces and boiled first in boiling water until soft. After that, the jackfruit pieces are poured with coconut milk—often mixed with coconut water, seasoned with certain spices and boiled for a long time—usually for 4-6 hours.</p>
                 </div>
             </div>
           </div>
