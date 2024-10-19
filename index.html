@@ -15,34 +15,43 @@
     <!-- NAVBAR --> <!-- NAVBAR --> <!-- NAVBAR --> <!-- NAVBAR -->
 
     <nav
-      class="bg-white/30 backdrop-blur-sm fixed mt-2 top-4 left-1/2 transform -translate-x-1/2 w-10/12 max-w-screen-lg rounded-full py-4 z-50 shadow-sm"
-    >
-      <div class="flex justify-evenly items-center px-16">
-        <ul class="flex space-x-20">
-          <li>
-            <a href="index.html" class="text-[#D2FF72] relative garis font-bold">HOME</a>
-          </li>
-          <li>
-            <a href="culture.html" class="text-white relative garis font-semibold"
-              >CULTURE</a
-            >
-          </li>
-        </ul>
-        <div class="text-white text-xl font-bold">LOGO</div>
-        <ul class="flex space-x-20">
-          <li>
-            <a href="explore.html" class="text-white relative garis font-semibold"
-              >EXPLORE</a
-            >
-          </li>
-          <li>
-            <a href="askjava.html" class="text-white relative garis font-semibold"
-              >ASK JAVA</a
-            >
-          </li>
-        </ul>
+    class="bg-white/30 backdrop-blur-sm fixed mt-2 top-4 left-1/2 transform -translate-x-1/2 w-10/12 max-w-screen-lg rounded-full py-4 z-50 shadow-sm"
+  >
+    <div class="flex justify-evenly items-center px-16">
+      <ul id="navbar-left" class="hidden md:flex space-x-20">
+      <li>
+        <a href="index.html" class="text-[#D2FF72] relative garis font-bold">HOME</a>
+      </li>
+      <li>
+        <a href="culture.html" class="text-white relative garis font-semibold">CULTURE</a>
+      </li>
+    </ul>
+      <div class="text-white text-xl font-bold">LOGO</div>
+      <ul id="navbar-right" class="hidden md:flex space-x-20">
+        <li>
+          <a href="explore.html" class="text-white relative garis font-semibold">EXPLORE</a>
+        </li>
+        <li>
+          <a href="askjava.html" class="text-white relative garis font-semibold">ASK JAVA</a>
+        </li>
+      </ul>
+      <div class="md:hidden">
+        <button id="hamburger-btn" class="text-white focus:outline-none">
+          <svg src="images/burger-icon.svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
-    </nav>
+    </div>
+    <div id="dropdown-menu" class="hidden absolute top-full right-0 bg-white/30 backdrop-blur-sm shadow-lg rounded-lg">
+      <ul class="flex flex-col space-y-3 px-5 py-2 text-right">
+        <li><a href="index.html" class="text-[#D2FF72] font-bold">HOME</a></li>
+        <li><a href="culture.html" class="text-white font-semibold">CULTURE</a></li>
+        <li><a href="explore.html" class="text-white font-semibold">EXPLORE</a></li>
+        <li><a href="askjava.html" class="text-white font-semibold">ASK JAVA</a></li>
+      </ul>
+    </div>
+  </nav>
 
     <!-- HERO --> <!-- HERO --> <!-- HERO --> <!-- HERO -->
 
@@ -603,6 +612,23 @@
   </footer>
 
     <!-- JAVASCRIPT --> <!-- JAVASCRIPT --> <!-- JAVASCRIPT --> <!-- JAVASCRIPT -->
+
+    <script>
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const dropdownMenu = document.getElementById('dropdown-menu');
+  
+      // Open/Close dropdown menu when hamburger is clicked
+      hamburgerBtn.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('hidden');
+      });
+  
+      // Optional: Close dropdown when clicking outside
+      document.addEventListener('click', function (event) {
+        if (!dropdownMenu.contains(event.target) && !hamburgerBtn.contains(event.target)) {
+          dropdownMenu.classList.add('hidden');
+        }
+      });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>

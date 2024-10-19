@@ -18,36 +18,37 @@
       class="bg-[#15B392] fixed mt-2 top-4 left-1/2 transform -translate-x-1/2 w-10/12 max-w-screen-lg rounded-full py-4 z-50 shadow-sm"
     >
       <div class="flex justify-evenly items-center px-16">
-        <ul class="flex space-x-20">
+        <ul id="navbar-left" class="hidden md:flex space-x-20">
+        <li>
+          <a href="index.html" class="text-white relative garis font-bold">HOME</a>
+        </li>
+        <li>
+          <a href="culture.html" class="text-white relative garis font-semibold">CULTURE</a>
+        </li>
+      </ul>
+        <div class="text-white text-xl font-bold">LOGO</div>
+        <ul id="navbar-right" class="hidden md:flex space-x-20">
           <li>
-            <a href="index.html" class="text-white relative garis font-bold"
-              >HOME</a
-            >
+            <a href="explore.html" class="text-white relative garis font-semibold">EXPLORE</a>
           </li>
           <li>
-            <a
-              href="culture.html"
-              class="text-white relative garis font-semibold"
-              >CULTURE</a
-            >
+            <a href="askjava.html" class="text-[#D2FF72] relative garis font-semibold">ASK JAVA</a>
           </li>
         </ul>
-        <div class="text-white text-xl font-bold">LOGO</div>
-        <ul class="flex space-x-20">
-          <li>
-            <a
-              href="explore.html"
-              class="text-white relative garis font-semibold"
-              >EXPLORE</a
-            >
-          </li>
-          <li>
-            <a
-              href="askjava.html"
-              class="text-[#D2FF72] relative garis font-semibold"
-              >ASK JAVA</a
-            >
-          </li>
+        <div class="md:hidden">
+          <button id="hamburger-btn" class="text-white focus:outline-none">
+            <svg src="images/burger-icon.svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="dropdown-menu" class="hidden absolute top-full right-0 bg-[#15B392] shadow-lg rounded-lg">
+        <ul class="flex flex-col space-y-3 px-5 py-2 text-right">
+          <li><a href="index.html" class="text-white font-bold">HOME</a></li>
+          <li><a href="culture.html" class="text-white font-semibold">CULTURE</a></li>
+          <li><a href="explore.html" class="text-white font-semibold">EXPLORE</a></li>
+          <li><a href="askjava.html" class="text-[#D2FF72] font-semibold">ASK JAVA</a></li>
         </ul>
       </div>
     </nav>
@@ -113,7 +114,7 @@
             marginheight="0"
             marginwidth="0"
             scrolling="no"
-            src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4052272.254078778!2d107.26587790177713!3d-7.320483578793414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7aa07ed2323237%3A0x86fe1c59d6abed60!2sPulau%20Jawa!5e0!3m2!1sid!2sid!4v1729302397793!5m2!1sid!2sid"
             style="filter: grayscale(1) contrast(1.2) opacity(0.4)"
           ></iframe>
           <div
@@ -267,6 +268,22 @@
       </div>
     </footer>
 
+    <script>
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const dropdownMenu = document.getElementById('dropdown-menu');
+  
+      // Open/Close dropdown menu when hamburger is clicked
+      hamburgerBtn.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('hidden');
+      });
+  
+      // Optional: Close dropdown when clicking outside
+      document.addEventListener('click', function (event) {
+        if (!dropdownMenu.contains(event.target) && !hamburgerBtn.contains(event.target)) {
+          dropdownMenu.classList.add('hidden');
+        }
+      });
+    </script>
     <script>
       const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input button");
