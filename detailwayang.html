@@ -45,42 +45,47 @@
   </head>
   <body class="bg-yellow-50">
     <nav
-      class="bg-[#15B392] fixed mt-2 top-4 left-1/2 transform -translate-x-1/2 w-10/12 max-w-screen-lg rounded-full py-4 z-50 shadow-sm"
-    >
-      <div class="flex justify-evenly items-center px-16">
-        <ul class="flex space-x-20">
-          <li>
-            <a href="index.html" class="text-[#D2FF72] relative garis font-bold"
-              >HOME</a
-            >
-          </li>
-          <li>
-            <a
-              href="culture.html"
-              class="text-white relative garis font-semibold"
-              >CULTURE</a
-            >
-          </li>
-        </ul>
-        <div class="text-white text-xl font-bold"></div>
-        <ul class="flex space-x-20">
-          <li>
-            <a
-              href="explore.html"
-              class="text-white relative garis font-semibold"
-              >EXPLORE</a
-            >
-          </li>
-          <li>
-            <a
-              href="askjava.html"
-              class="text-white relative garis font-semibold"
-              >ASK JAVA</a
-            >
-          </li>
-        </ul>
+    class="bg-[#15b392] fixed top-4 left-1/2 transform -translate-x-1/2 w-10/12 max-w-screen-lg rounded-full py-4 z-50 shadow-md shadow-black/2">
+    <div class="flex justify-between items-center px-4 md:px-16">
+
+      <ul id="navbar-left" class="hidden md:flex space-x-20">
+        <li>
+          <a href="index.html" class="text-white relative garis font-bold">HOME</a>
+        </li>
+        <li>
+          <a href="culture.html" class="text-white relative garis font-semibold">CULTURE</a>
+        </li>
+      </ul>
+
+      <img src="logo_ji.png" class="h-5">
+
+      <ul id="navbar-right" class="hidden md:flex space-x-20">
+        <li>
+          <a href="explore.html" class="text-white relative garis font-semibold">EXPLORE</a>
+        </li>
+        <li>
+          <a href="askjava.html" class="text-white relative garis font-semibold">ASK JAVA</a>
+        </li>
+      </ul>
+
+      <div class="md:hidden">
+        <button id="hamburger-btn" class="text-white focus:outline-none">
+          <svg src="images/burger-icon.svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
-    </nav>
+    </div>
+
+    <div id="dropdown-menu" class="hidden absolute top-full right-0 bg-[#15B392] shadow-lg rounded-lg">
+      <ul class="flex flex-col space-y-3 px-5 py-2 text-right">
+        <li><a href="index.html" class="text-white font-bold">HOME</a></li>
+        <li><a href="culture.html" class="text-white font-semibold">CULTURE</a></li>
+        <li><a href="explore.html" class="text-white font-semibold">EXPLORE</a></li>
+        <li><a href="askjava.html" class="text-white font-semibold">ASK JAVA</a></li>
+      </ul>
+    </div>
+  </nav>
 
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-52 mx-auto flex flex-col">
@@ -95,28 +100,28 @@
           <div class="flex flex-col sm:flex-row mt-10">
             <div class="w-full mt-4 text-center sm:text-left">
               <p class="leading-relaxed text-lg mb-4 fadeinup">
-                Wayang kulit (Javanese: ꦮꦪꦁꦏꦸꦭꦶꦠ꧀) is a traditional form of
-                wayang art originally found in Javanese and Balinese cultures in
-                Indonesia.[1] Wayang kulit narratives often deal with the
-                central theme of good versus evil.
+                Wayang kulit (bahasa Jawa: ꦮꦪꦁꦏꦸꦭꦶꦠ꧀) adalah salah satu bentuk pertunjukan tradisional.
+                Kesenian wayang mula-mula terdapat pada kebudayaan Jawa dan Bali
+                Indonesia.[1] Narasi wayang kulit seringkali dikaitkan dengan hal ini
+                tema sentral kebaikan versus kejahatan.
               </p>
             </div>
           </div>
           <div class="flex flex-col sm:flex-row mt-10">
             <div class="w-full mt-4 text-center sm:text-left">
               <p class="leading-relaxed text-lg mb-4 fadeinup">
-                In Javanese beliefs and literature, wayang kulit was created by
-                Kanjeng Sunan Kalijaga who was a member of Wali Songo and a
-                descendant of the Ponorogo nobility, Arya Wiraraja. Kanjeng
-                Sunan Kalijaga saw that Indonesian people, especially Javanese
-                people, were fond of Wayang Beber performances, in Islam
-                painting on paper is considered Haram (prohibited), therefore
-                Kanjeng Sunan Kalijaga modified the material of the Wayang
-                characters which were originally made of Daluang (Ponoragan
-                paper) and replaced it using cow or buffalo leather. In
-                addition, wayang kulit is used as a propagation of Islam through
-                traditional culture. Sunan Kalijaga also added new characters
-                such as punakawan consisting of Semar, Bagong, Petruk, and
+                Dalam kepercayaan dan sastra Jawa, wayang kulit diciptakan oleh
+                Kanjeng Sunan Kalijaga yang merupakan anggota Wali Songo dan a
+                keturunan bangsawan Ponorogo, Arya Wiraraja. Kanjeng
+                Sunan Kalijaga melihat masyarakat Indonesia khususnya suku Jawa
+                masyarakat, sangat menyukai pertunjukan Wayang Beber, secara Islam
+                Oleh karena itu, melukis di atas kertas dianggap Haram (dilarang).
+                Kanjeng Sunan Kalijaga memodifikasi bahan wayang
+                aksara yang aslinya terbuat dari Daluang (Ponoragan
+                kertas) dan diganti dengan kulit sapi atau kerbau. Di dalam
+                Selain itu, wayang kulit digunakan sebagai dakwah Islam melalui
+                budaya tradisional. Sunan Kalijaga pun menambahkan karakter baru
+                seperti punakawan yang terdiri dari Semar, Bagong, Petruk, dan
                 Gareng.
               </p>
             </div>
@@ -124,22 +129,22 @@
           <div class="flex flex-col sm:flex-row my-10">
             <div class="w-full mt-4 text-center sm:text-left">
               <p class="leading-relaxed text-lg mb-4 fadeinup2">
-                The art of puppetry, especially wayang, is thought to have been
-                born in Indonesia during the reign of Airlangga, who ruled the
-                Kahuripan kingdom (976-1012). Javanese literary works that
-                became the source of wayang stories were written by Indonesian
-                poets in the 10th century, such as the Ramayana kakawin book in
-                Old Javanese written during the reign of King Dyah Balitung
-                (989-910). This book is thought to be a composition of the
-                Ramayana book written by the Indian poet, Valmiki. The poets no
-                longer only adapted books from abroad but also changed and
-                created literary works with Javanese philosophy. Wayang kulit
-                began to be performed during the reign of Airlangga. This can be
-                seen from several inscriptions made at that time, which mention
-                the words mawayang and aringgit which already exist, indicating
-                that the wayang performance referred to here is wayang kulit.
-                Thus, the art of wayang kulit has existed since the time of
-                Airlangga and is still ongoing today.
+                Seni pedalangan, khususnya wayang, diperkirakan demikian
+                lahir di Indonesia pada masa pemerintahan Airlangga yang memerintah
+                Kerajaan Kahuripan (976-1012). Karya sastra Jawa itu
+                menjadi sumber cerita wayang yang ditulis oleh orang Indonesia
+                penyair pada abad ke 10, seperti kitab kakawin Ramayana pada abad ke-10
+                Bahasa Jawa Kuno ditulis pada masa pemerintahan Raja Dyah Balitung
+                (989-910). Buku ini diperkirakan merupakan komposisi dari
+                Buku Ramayana yang ditulis oleh penyair India, Valmiki. Para penyair no
+                lagi hanya mengadaptasi buku-buku dari luar negeri tetapi juga mengubah dan
+                menciptakan karya sastra berfilsafat Jawa. Wayang kulit
+                mulai dipentaskan pada masa pemerintahan Airlangga. Ini bisa jadi
+                terlihat dari beberapa prasasti yang dibuat pada masa itu, yang menyebutkan
+                kata mawayang dan aringgit yang sudah ada, menunjukkan
+                bahwa pertunjukan wayang yang dimaksud di sini adalah wayang kulit.
+                Dengan demikian, seni wayang kulit sudah ada sejak zaman
+                Airlangga dan masih berlangsung hingga saat ini.
               </p>
             </div>
           </div>
@@ -153,32 +158,32 @@
           <div class="flex flex-col sm:flex-row my-10">
             <div class="w-full mt-4 text-center sm:text-left">
               <p class="leading-relaxed text-lg mb-4 fadeinup2">
-                Wayang comes from the word "Ma Hyang" which means to go to the
-                spiritual spirit, god, or God Almighty. There are also those who
-                interpret wayang as a Javanese term meaning "shadow", this is
-                because the audience can also watch the wayang from behind the
-                screen or just its shadow. Wayang kulit is played by a puppeteer
-                who is also the narrator of the wayang characters' dialogue,
-                accompanied by gamelan music played by a group of nayaga and
-                songs sung by pesinden. The puppeteer plays the wayang kulit
-                behind the screen, which is a screen made of white cloth, while
-                behind it is highlighted by electric lights or oil lamps
-                (blencong), so that the audience on the other side of the screen
-                can see the shadow of the wayang that falls onto the screen. To
-                be able to understand the wayang story (lakon), the audience
-                must have knowledge of the wayang characters whose shadows
-                appear on the screen.
+                Wayang berasal dari kata “Ma Hyang” yang berarti pergi ke
+                roh spiritual, Tuhan, atau Tuhan Yang Maha Esa. Ada juga yang
+                mengartikan wayang sebagai istilah jawa yang berarti “bayangan”, begini
+                karena penonton juga bisa menyaksikan wayang dari belakang
+                layar atau hanya bayangannya. Wayang kulit dimainkan oleh seorang dalang
+                yang juga menjadi narator dialog tokoh wayang,
+                diiringi musik gamelan yang dimainkan oleh sekelompok nayaga dan
+                lagu yang di nyanyikan oleh pesinden. Dalang memainkan wayang kulit
+                di balik layar, yaitu layar yang terbuat dari kain putih, sedangkan
+                dibelakangnya diterangi lampu listrik atau lampu minyak
+                (blencong), sehingga penonton berada di sisi lain layar
+                dapat melihat bayangan wayang yang jatuh ke layar. Ke
+                mampu memahami cerita wayang (lakon), penonton
+                harus mempunyai pengetahuan tentang tokoh wayang yang bayangannya
+                muncul di layar.
               </p>
             </div>
           </div>
           <div class="flex flex-col sm:flex-row my-10">
             <div class="w-full mt-4 text-center sm:text-left">
               <p class="leading-relaxed text-lg mb-4 fadeinup2">
-                In general, wayang takes stories from the Mahabharata and
-                Ramayana scripts, but is not limited to just those standards,
-                the puppeteer can also play carangan (composition) plays. Some
-                stories are taken from Panji stories, as well as spiritual
-                stories from Islam, Christianity, Hinduism, and Buddhism.
+                Secara umum wayang mengambil cerita dari Mahabharata dan
+                Aksara Ramayana, namun tidak terbatas pada standar tersebut saja,
+                dalang juga dapat memainkan lakon carangan (gubahan). Beberapa
+                Cerita diambil dari cerita Panji, maupun spiritual
+                cerita dari Islam, Kristen, Hindu, dan Budha.
               </p>
             </div>
           </div>
@@ -192,7 +197,7 @@
           <img class="w-8" src="Images/logo_ji.png">
 
           <p class="max-w-md mx-auto mt-4 text-white fadeinup">
-            The 13th Largest Island In The World.
+            Pulau Terbesar ke-13 Di Dunia.
           </p>
 
           <div
@@ -202,14 +207,14 @@
               <button
                 class="flex items-center justify-center order-1 w-full px-2 py-2 mt-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform border rounded-md sm:mx-2 sm:mt-0 sm:w-auto hover:bg-white hover:text-[#15B392] focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40"
               >
-                <span href="explore.html" class="mx-1">Let's Visit</span>
+                <span href="explore.html" class="mx-1">Ayo Kunjungi</span>
               </button>
             </a>
             <a href="index.html">
               <button
                 class="flex items-center justify-center order-1 w-full px-2 py-2 mt-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform border rounded-md sm:mx-2 sm:mt-0 sm:w-auto hover:bg-white hover:text-[#15B392] focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40"
               >
-                <span href="index.html" class="mx-1">Read More</span>
+                <span href="index.html" class="mx-1">Baca selengkapnya</span>
               </button>
             </a>
           </div>
@@ -252,5 +257,20 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const dropdownMenu = document.getElementById('dropdown-menu');
+    
+      hamburgerBtn.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('hidden');
+      });
+    
+      document.addEventListener('click', function (event) {
+        if (!dropdownMenu.contains(event.target) && !hamburgerBtn.contains(event.target)) {
+          dropdownMenu.classList.add('hidden');
+        }
+      });
+    </script>
   </body>
 </html>
