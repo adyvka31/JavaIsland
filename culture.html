@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budaya | JavaIsland</title>
+    <link rel="stylesheet" href="css/culture.css" />
+    <link class="w-52" rel="icon" href="Images/logo_ji.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-yellow-50 overflow-x-hidden">
+    <!-- NAVBAR -->
+    <!-- NAVBAR -->
+    <!-- NAVBAR -->
+    <!-- NAVBAR -->
+
+    <nav
+      class="bg-[#15B392] fixed mt-2 top-4 left-1/2 transform -translate-x-1/2 w-10/12 max-w-screen-lg rounded-full py-4 z-50 shadow-sm"
+    >
+      <div class="flex justify-evenly items-center px-16">
+        <ul id="navbar-left" class="hidden md:flex space-x-20">
+        <li>
+          <a href="index.html" class="text-white relative garis font-bold">BERANDA</a>
+        </li>
+        <li>
+          <a href="culture.html" class="text-[#D2FF72] relative garis font-semibold">BUDAYA</a>
+        </li>
+      </ul>
+      <img class="w-8" src="Images/logo_ji.png">
+        <ul id="navbar-right" class="hidden md:flex space-x-20">
+          <li>
+            <a href="explore.html" class="text-white relative garis font-semibold">JELAJAHI</a>
+          </li>
+          <li>
+            <a href="askjava.html" class="text-white relative garis font-semibold">TANYA JAWA</a>
+          </li>
+        </ul>
+        <div class="md:hidden">
+          <button id="hamburger-btn" class="text-white focus:outline-none">
+            <svg src="images/burger-icon.svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="dropdown-menu" class="hidden absolute top-full right-0 bg-[#15B392] shadow-lg rounded-lg">
+        <ul class="flex flex-col space-y-3 px-5 py-2 text-right">
+          <li><a href="index.html" class="text-white font-bold">BERANDA</a></li>
+          <li><a href="culture.html" class="text-[#D2FF72] font-semibold">BUDAYA</a></li>
+          <li><a href="explore.html" class="text-white font-semibold">JELAJAHI</a></li>
+          <li><a href="askjava.html" class="text-white font-semibold">TANYA JAWA</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  <section class="py-52 text-center container mx-auto">
+    <div
+          class="flex flex-col text-center w-full lg:mb-32 md:mb-12 max-[767px]:mb-12 fadeindown"
+        >
+          <h1
+            class="lg:text-5xl md:text-4xl max-[767px]:text-3xl font-extrabold text-gray-900 fadeinup2"
+          >
+          Kisah Bersejarah <span class="javaisland2">JavaIsland</span>
+          </h1>
+          <p class="lg:w-1/2 mx-auto leading-relaxed text-base fadeinup2">
+            Jawa adalah pulau yang kaya akan sejarah
+          </p>
+        </div>
+  
+    <!-- Narasi 1: Kerajaan Majapahit -->
+    <div class="flex items-center justify-between pb-12 px-6 rounded-lg mb-10 container mx-auto">
+        <div class="w-1/2 text-left fadeinright">
+            <h3 class="text-2xl font-bold mb-4">Kerajaan Majapahit</h3>
+            <p class="text-lg">
+              Pada abad ke-13, Kerajaan Majapahit bangkit dan menjadi salah satu kerajaan paling berpengaruh di Asia Tenggara. Para penguasanya adalah pelindung seni, sastra, dan budaya, yang memainkan peran penting dalam membentuk tradisi Jawa. Pengaruh kerajaan tersebut masih terasa hingga saat ini, terutama dalam seni wayang kulit dan gamelan.
+            </p>
+        </div>
+        <div class="w-2/5 relative fadeinleft">
+            <img src="https://i.pinimg.com/564x/7e/60/65/7e606503736772efb2a346e7e560075c.jpg" alt="Majapahit Kingdom" class="w-full fixed-size rounded-lg hover:scale-105 transition-transform cursor-pointer" 
+                onclick="openModal('Majapahit Kingdom', 'The Majapahit Kingdom was a powerful empire that significantly influenced the cultural heritage of Java.', 'https://i.pinimg.com/564x/7e/60/65/7e606503736772efb2a346e7e560075c.jpg')">
+    
+        </div>
+    </div>
+  
+    <!-- Narasi 2: Keraton dan Kesultanan -->
+    <div class="flex items-center justify-between pb-12 px-6 rounded-lg mb-10 flex-row-reverse container mx-auto">
+        <div class="w-1/2 text-right fadeinleftup">
+            <h3 class="text-2xl font-bold mb-4">Kesultanan Jawa</h3>
+            <p class="text-lg">
+              Istana kerajaan, atau "keraton," Jawa bukan sekadar simbol kekuasaan. Istana kerajaan adalah jantung pelestarian budaya Jawa. Kesultanan Yogyakarta, misalnya, telah memainkan peran penting dalam menjaga tradisi kuno, seperti pembuatan batik dan musik gamelan, agar tetap hidup.
+            </p>
+        </div>
+        <div class="w-2/5 relative fadeinrightup">
+            <img src="https://i.pinimg.com/564x/d6/47/8b/d6478b7f190896af4eba405895c386d7.jpg" alt="Sultan of Yogyakarta" class="w-full fixed-size rounded-lg hover:scale-105 transition-transform cursor-pointer" 
+                onclick="openModal('Sultan of Yogyakarta', 'The Sultanate of Yogyakarta is known for preserving Javanese traditions and cultural heritage.', 'https://i.pinimg.com/564x/d6/47/8b/d6478b7f190896af4eba405895c386d7.jpg')">
+    
+        </div>
+    </div>
+    <!-- Narasi 3: Kerajaan Majapahit -->
+  <div class="flex items-center justify-between px-6 rounded-lg mb-10 container mx-auto">
+    <div class="w-1/2 text-left fadeinrightup">
+        <h3 class="text-2xl font-bold mb-4">Kerajaan Majapahit</h3>
+        <p class="text-lg">
+          Pada abad ke-13, Kerajaan Majapahit bangkit dan menjadi salah satu kerajaan paling berpengaruh di Asia Tenggara. Para penguasanya adalah pelindung seni, sastra, dan budaya, yang memainkan peran penting dalam membentuk tradisi Jawa. Pengaruh kerajaan tersebut masih terasa hingga saat ini, terutama dalam seni wayang kulit dan gamelan.
+    </div>
+    <div class="w-2/5 relative fadeinleftup">
+        <img src="https://i.pinimg.com/564x/7e/60/65/7e606503736772efb2a346e7e560075c.jpg" alt="Majapahit Kingdom" class="w-full fixed-size rounded-lg hover:scale-105 transition-transform cursor-pointer" 
+            onclick="openModal('Majapahit Kingdom', 'The Majapahit Kingdom was a powerful empire that significantly influenced the cultural heritage of Java.', 'https://i.pinimg.com/564x/7e/60/65/7e606503736772efb2a346e7e560075c.jpg')">
+
+    </div>
+</div>
+  </section>
+
+  <section class="w-full bg-[#15B392] text-gray-600 body-font">
+    <div class="container  px-5 py-32 mx-auto">
+      <div class="flex flex-wrap w-full mb-20">
+        <div class="lg:w-1/2 w-full mb-6 lg:mb-0 fadeinrightup">
+          <h1
+            class="sm:text-3xl text-2xl font-extrabold title-font mb-2 text-white"
+          >
+          Pelajari Budaya Jawa
+          </h1>
+          <div class="h-1 w-20 bg-white rounded"></div>
+        </div>
+        <p class="lg:w-1/2 w-full leading-relaxed text-gray-50 fadeinleftup">
+          Indonesia merupakan negara yang memiliki beragam budaya serta adat istiadat yang menjadi salah satu keunikan dan daya tarik bagi wisatawan lokal maupun mancanegara untuk menyaksikan beberapa pertunjukan budaya Indonesia.
+        </p>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="xl:w-1/4 md:w-1/2 p-2">
+          <div class="bg-gray-100 p-6 rounded-lg fadeinrightup">
+            <img
+              class="h-40 rounded shadow-lg w-full object-cover object-center mb-6"
+              src="https://i.pinimg.com/564x/9c/9d/8c/9c9d8cf5b1ffca377b9adb4b9f059ed7.jpg"
+              alt="content"
+            />
+            <h2
+              class="text-lg text-center text-gray-900 font-medium title-font mb-4"
+            >
+              Wayang Kulit
+            </h2>
+            <p class="w-[260px] leading-relaxed text-center text-base">
+              Wayang kulit merupakan bentuk seni wayang tradisional yang aslinya ditemukan dalam budaya.
+            </p>
+          </div>
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 p-2">
+          <div class="bg-gray-100 p-6 rounded-lg fadeinrightup">
+            <img
+              class="h-40 rounded shadow-lg w-full object-cover object-center mb-6"
+              src="https://i.pinimg.com/564x/25/0f/42/250f4209e157c3670506446998e4c4a6.jpg"
+              alt="content"
+            />
+            <h2
+              class="text-lg text-center text-gray-900 font-medium title-font mb-4"
+            >
+              Tari Saman
+            </h2>
+            <p class="leading-relaxed text-center text-base">
+              Tari Saman merupakan tarian rakyat dari masyarakat Gayo di Aceh, Indonesia.
+            </p>
+          </div>
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 p-2">
+          <div class="bg-gray-100 p-6 rounded-lg fadeinleftup">
+            <img
+              class="h-40 rounded shadow-lg w-full object-cover object-bottom mb-6"
+              src="https://i.pinimg.com/564x/f0/9f/4e/f09f4eb71703ed9f7947c1cf70800df9.jpg"
+              alt="content"
+            />
+            <h2
+              class="text-lg text-gray-900 text-center font-medium title-font mb-4"
+            >
+              Angklung
+            </h2>
+            <p class="leading-relaxed text-base text-center">
+              Angklung merupakan alat musik multitonal yang berkembang di kalangan masyarakat Sunda.
+            </p>
+          </div>
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 p-2">
+          <div class="bg-gray-100 p-6 rounded-lg fadeinleftup">
+            <img
+              class="h-40 rounded shadow-lg w-full object-cover object-center mb-6"
+              src="https://i.pinimg.com/736x/59/14/76/591476dd07c15d60e6ed498cf2c289ec.jpg"
+              alt="content"
+            />
+            <h2
+              class="text-lg text-gray-900 text-center font-medium title-font mb-4"
+            >
+            Reog Ponorogo
+            </h2>
+            <p class="leading-relaxed text-base text-center">
+              Reog adalah tarian tradisional dari Ponorogo, Jawa Timur di arena terbuka.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Sejarah Jawa -->
+ 
+  
+        <div class="container px-5 py-52 flex flex-wrap mx-auto fadeinup2">
+          <div class="flex flex-wrap w-full mb-20">
+            <div class="flex flex-wrap w-1/2">
+              <div class="md:p-2 p-1 w-1/2 relative">
+                <img alt="gallery" class="gege w-full rounded-lg object-cover h-full object-center block" src="https://i.pinimg.com/736x/14/04/f3/1404f3ba774387ac66fa27307e85941e.jpg">
+              </div>
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="gege w-full rounded-lg object-cover h-full object-center block" src="https://i.pinimg.com/564x/f0/9f/4e/f09f4eb71703ed9f7947c1cf70800df9.jpg">
+              </div>
+              <div class="md:p-2 p-1 w-full">
+                <img alt="gallery" class="gege w-full rounded-lg h-full object-cover object-center block" src="Images/15041.jpg">
+              </div>
+            </div>
+            <div class="flex flex-wrap w-1/2">
+              <div class="md:p-2 p-1 w-full">
+                <img alt="gallery" class="gege w-full rounded-lg h-full object-cover object-center block" src="https://i.pinimg.com/564x/58/8b/99/588b99846fc1cbb8931753142614aaf0.jpg">
+              </div>
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="gege w-full rounded-lg object-cover h-full object-center block" src="https://i.pinimg.com/control/564x/40/ca/70/40ca705f8f0dc0cd113d00b16c1d4207.jpg">
+              </div>
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="gege w-full rounded-lg object-cover h-full object-center block" src="https://i.pinimg.com/564x/db/d4/3b/dbd43b4e9452987ac0ba2c651d5c26f4.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  -->
+
+<!-- Modal -->
+ 
+<div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center">
+    <div class="bg-white rounded-lg p-6 max-w-md mx-auto">
+        <h2 id="modal-title" class="text-xl font-bold mb-2"></h2>
+        <img id="modal-image" class="w-full rounded-lg mb-4" src="" alt="">
+        <p id="modal-description" class="text-gray-700"></p>
+        <button onclick="closeModal()"
+            class="mt-4 bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition duration-300">Close</button>
+    </div>
+</div>
+
+<footer class="w-full bg-[#15B392]">
+  <div class="container px-6 py-8 mx-auto">
+    <div class="flex flex-col items-center text-center">
+      <a href="#">
+        <img class="w-8" src="Images/logo_ji.png">
+      </a>
+
+      <p class="max-w-md mx-auto mt-4 text-white fadeinup">
+        Pulau Terbesar ke-13 di Dunia.
+      </p>
+
+      <div
+        class="flex flex-col mt-4 sm:flex-row sm:items-center sm:justify-center fadeinup"
+      >
+        <a href="explore.html">
+          <button
+            class="flex items-center justify-center order-1 w-full px-2 py-2 mt-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform border rounded-md sm:mx-2 sm:mt-0 sm:w-auto hover:bg-white hover:text-[#15B392] focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40"
+          >
+            <span href="explore.html" class="mx-1">Ayo Berkunjung</span>
+          </button>
+        </a>
+        <a href="index.html">
+          <button
+            class="flex items-center justify-center order-1 w-full px-2 py-2 mt-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform border rounded-md sm:mx-2 sm:mt-0 sm:w-auto hover:bg-white hover:text-[#15B392] focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40"
+          >
+            <span href="index.html" class="mx-1">Baca Selengkapnya</span>
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <hr class="my-10 border-gray-200" />
+
+    <div
+      class="flex flex-col items-center sm:flex-row sm:justify-between fadeinup"
+    >
+      <p class="text-sm text-white">
+        © JavaIsland 2024. Hak Cipta Di Lindungi Undang-Undang.
+      </p>
+
+      <div class="flex mt-3 -mx-2 sm:mt-0">
+        <a
+          href="index.html"
+          class="mx-2 text-sm text-white transition-colors duration-300 hover:text-white dark:hover:text-gray-300"
+          aria-label="Reddit"
+        >
+          Beranda
+        </a>
+
+        <a
+          href="culture.html"
+          class="mx-2 text-sm text-white transition-colors duration-300 hover:text-white dark:hover:text-gray-300"
+          aria-label="Reddit"
+        >
+          Jelajahi
+        </a>
+
+        <a
+          href="explore.html"
+          class="mx-2 text-sm text-white transition-colors duration-300 hover:text-white dark:hover:text-gray-300"
+          aria-label="Reddit"
+        >
+          Tanya Jawa
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script>
+       function openModal(title, description, imageUrl) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-description').innerText = description;
+            document.getElementById('modal-image').src = imageUrl;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+    </script>
+    <script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+
+    // Open/Close dropdown menu when hamburger is clicked
+    hamburgerBtn.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('hidden');
+    });
+
+    // Optional: Close dropdown when clicking outside
+    document.addEventListener('click', function (event) {
+      if (!dropdownMenu.contains(event.target) && !hamburgerBtn.contains(event.target)) {
+        dropdownMenu.classList.add('hidden');
+      }
+    });
+  </script>
+  </body>
+</html>

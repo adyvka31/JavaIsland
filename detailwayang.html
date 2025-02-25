@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puppet | JavaIsland</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 40px 0;
+        font-family: "Raleway";
+        font-size: 14px;
+        font-weight: 500;
+        background-color: #bcaaa4;
+        -webkit-font-smoothing: antialiased;
+        place-items: center;
+      }
+      .fadeinup {
+        animation: fadeInUp 1s ease-in-out forwards;
+      }
+      .fadeinup2 {
+        animation: fadeInUp linear;
+        transition: 0.3s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 0% cover 30%;
+      }
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(70px);
+          visibility: visible;
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+          visibility: visible;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-yellow-50">
+    <nav
+      class="bg-[#15B392] fixed mt-2 top-4 left-1/2 transform -translate-x-1/2 w-10/12 max-w-screen-lg rounded-full py-4 z-50 shadow-sm"
+    >
+      <div class="flex justify-evenly items-center px-16">
+        <ul id="navbar-left" class="hidden md:flex space-x-20">
+        <li>
+          <a href="index.html" class="text-white relative garis font-bold">BERANDA</a>
+        </li>
+        <li>
+          <a href="culture.html" class="text-white relative garis font-semibold">BUDAYA</a>
+        </li>
+      </ul>
+      <img class="w-8" src="Images/logo_ji.png">
+        <ul id="navbar-right" class="hidden md:flex space-x-20">
+          <li>
+            <a href="explore.html" class="text-white relative garis font-semibold">JELAJAHI</a>
+          </li>
+          <li>
+            <a href="askjava.html" class="text-white relative garis font-semibold">TANYA JAWA</a>
+          </li>
+        </ul>
+        <div class="md:hidden">
+          <button id="hamburger-btn" class="text-white focus:outline-none">
+            <svg src="images/burger-icon.svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="dropdown-menu" class="hidden absolute top-full right-0 bg-[#15B392] shadow-lg rounded-lg">
+        <ul class="flex flex-col space-y-3 px-5 py-2 text-right">
+          <li><a href="index.html" class="text-white font-bold">BERANDA</a></li>
+          <li><a href="culture.html" class="text-white font-semibold">BUDAYA</a></li>
+          <li><a href="explore.html" class="text-white font-semibold">JELAJAHI</a></li>
+          <li><a href="askjava.html" class="text-white font-semibold">TANYA JAWA</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-52 mx-auto flex flex-col">
+        <div class="lg:w-4/6 mx-auto">
+          <div class="rounded-lg h-64 overflow-hidden fadeinup">
+            <img
+              alt="content"
+              class="object-cover object-center h-full w-full"
+              src="https://i.pinimg.com/564x/9c/9d/8c/9c9d8cf5b1ffca377b9adb4b9f059ed7.jpg"
+            />
+          </div>
+          <div class="flex flex-col sm:flex-row mt-10">
+            <div class="w-full mt-4 text-center sm:text-left">
+              <p class="leading-relaxed text-lg mb-4 fadeinup">
+                Wayang kulit (bahasa Jawa: ꦮꦪꦁꦏꦸꦭꦶꦠ꧀) adalah salah satu bentuk pertunjukan tradisional.
+                Kesenian wayang mula-mula terdapat pada kebudayaan Jawa dan Bali
+                Indonesia.[1] Narasi wayang kulit seringkali dikaitkan dengan hal ini
+                tema sentral kebaikan versus kejahatan.
+              </p>
+            </div>
+          </div>
+          <!--  -->
+          <div class="flex flex-col sm:flex-row mt-10">
+            <div class="w-full mt-4 text-center sm:text-left">
+              <p class="leading-relaxed text-lg mb-4 fadeinup">
+                Dalam kepercayaan dan sastra Jawa, wayang kulit diciptakan oleh
+                Kanjeng Sunan Kalijaga yang merupakan anggota Wali Songo dan a
+                keturunan bangsawan Ponorogo, Arya Wiraraja. Kanjeng
+                Sunan Kalijaga melihat masyarakat Indonesia khususnya suku Jawa
+                masyarakat, sangat menyukai pertunjukan Wayang Beber, secara Islam
+                Oleh karena itu, melukis di atas kertas dianggap Haram (dilarang).
+                Kanjeng Sunan Kalijaga memodifikasi bahan wayang
+                aksara yang aslinya terbuat dari Daluang (Ponoragan
+                kertas) dan diganti dengan kulit sapi atau kerbau. Di dalam
+                Selain itu, wayang kulit digunakan sebagai dakwah Islam melalui
+                budaya tradisional. Sunan Kalijaga pun menambahkan karakter baru
+                seperti punakawan yang terdiri dari Semar, Bagong, Petruk, dan
+                Gareng.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row my-10">
+            <div class="w-full mt-4 text-center sm:text-left">
+              <p class="leading-relaxed text-lg mb-4 fadeinup2">
+                Seni pedalangan, khususnya wayang, diperkirakan demikian
+                lahir di Indonesia pada masa pemerintahan Airlangga yang memerintah
+                Kerajaan Kahuripan (976-1012). Karya sastra Jawa itu
+                menjadi sumber cerita wayang yang ditulis oleh orang Indonesia
+                penyair pada abad ke 10, seperti kitab kakawin Ramayana pada abad ke-10
+                Bahasa Jawa Kuno ditulis pada masa pemerintahan Raja Dyah Balitung
+                (989-910). Buku ini diperkirakan merupakan komposisi dari
+                Buku Ramayana yang ditulis oleh penyair India, Valmiki. Para penyair no
+                lagi hanya mengadaptasi buku-buku dari luar negeri tetapi juga mengubah dan
+                menciptakan karya sastra berfilsafat Jawa. Wayang kulit
+                mulai dipentaskan pada masa pemerintahan Airlangga. Ini bisa jadi
+                terlihat dari beberapa prasasti yang dibuat pada masa itu, yang menyebutkan
+                kata mawayang dan aringgit yang sudah ada, menunjukkan
+                bahwa pertunjukan wayang yang dimaksud di sini adalah wayang kulit.
+                Dengan demikian, seni wayang kulit sudah ada sejak zaman
+                Airlangga dan masih berlangsung hingga saat ini.
+              </p>
+            </div>
+          </div>
+          <div class="rounded-lg h-64 overflow-hidden fadeinup2">
+            <img
+              alt="content"
+              class="object-cover object-center h-full w-full"
+              src="https://i.pinimg.com/564x/9f/50/c5/9f50c5e2160d0de02fb9ee0cbcd2864a.jpg"
+            />
+          </div>
+          <div class="flex flex-col sm:flex-row my-10">
+            <div class="w-full mt-4 text-center sm:text-left">
+              <p class="leading-relaxed text-lg mb-4 fadeinup2">
+                Wayang berasal dari kata “Ma Hyang” yang berarti pergi ke
+                roh spiritual, Tuhan, atau Tuhan Yang Maha Esa. Ada juga yang
+                mengartikan wayang sebagai istilah jawa yang berarti “bayangan”, begini
+                karena penonton juga bisa menyaksikan wayang dari belakang
+                layar atau hanya bayangannya. Wayang kulit dimainkan oleh seorang dalang
+                yang juga menjadi narator dialog tokoh wayang,
+                diiringi musik gamelan yang dimainkan oleh sekelompok nayaga dan
+                lagu yang di nyanyikan oleh pesinden. Dalang memainkan wayang kulit
+                di balik layar, yaitu layar yang terbuat dari kain putih, sedangkan
+                dibelakangnya diterangi lampu listrik atau lampu minyak
+                (blencong), sehingga penonton berada di sisi lain layar
+                dapat melihat bayangan wayang yang jatuh ke layar. Ke
+                mampu memahami cerita wayang (lakon), penonton
+                harus mempunyai pengetahuan tentang tokoh wayang yang bayangannya
+                muncul di layar.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row my-10">
+            <div class="w-full mt-4 text-center sm:text-left">
+              <p class="leading-relaxed text-lg mb-4 fadeinup2">
+                Secara umum wayang mengambil cerita dari Mahabharata dan
+                Aksara Ramayana, namun tidak terbatas pada standar tersebut saja,
+                dalang juga dapat memainkan lakon carangan (gubahan). Beberapa
+                Cerita diambil dari cerita Panji, maupun spiritual
+                cerita dari Islam, Kristen, Hindu, dan Budha.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="w-full bg-[#15B392]">
+      <div class="container px-6 py-8 mx-auto">
+        <div class="flex flex-col items-center text-center">
+          <img class="w-8" src="Images/logo_ji.png">
+
+          <p class="max-w-md mx-auto mt-4 text-white fadeinup">
+            Pulau Terbesar ke-13 Di Dunia.
+          </p>
+
+          <div
+            class="flex flex-col mt-4 sm:flex-row sm:items-center sm:justify-center fadeinup"
+          >
+            <a href="explore.html">
+              <button
+                class="flex items-center justify-center order-1 w-full px-2 py-2 mt-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform border rounded-md sm:mx-2 sm:mt-0 sm:w-auto hover:bg-white hover:text-[#15B392] focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40"
+              >
+                <span href="explore.html" class="mx-1">Ayo Kunjungi</span>
+              </button>
+            </a>
+            <a href="index.html">
+              <button
+                class="flex items-center justify-center order-1 w-full px-2 py-2 mt-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform border rounded-md sm:mx-2 sm:mt-0 sm:w-auto hover:bg-white hover:text-[#15B392] focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40"
+              >
+                <span href="index.html" class="mx-1">Baca selengkapnya</span>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <hr class="my-10 border-gray-200" />
+
+        <div
+          class="flex flex-col items-center sm:flex-row sm:justify-between fadeinup"
+        >
+          <p class="text-sm text-white">
+            © JavaIsland 2024. All Rights Reserved.
+          </p>
+
+          <div class="flex mt-3 -mx-2 sm:mt-0">
+            <a
+              href=".html"
+              class="mx-2 text-sm text-white transition-colors duration-300 hover:text-white dark:hover:text-gray-300"
+              aria-label="Reddit"
+            >
+              Culture
+            </a>
+
+            <a
+              href="explore.html"
+              class="mx-2 text-sm text-white transition-colors duration-300 hover:text-white dark:hover:text-gray-300"
+              aria-label="Reddit"
+            >
+              EXPLORE
+            </a>
+
+            <a
+              href="askjava.html"
+              class="mx-2 text-sm text-white transition-colors duration-300 hover:text-white dark:hover:text-gray-300"
+              aria-label="Reddit"
+            >
+              Ask Java
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const dropdownMenu = document.getElementById('dropdown-menu');
+    
+      hamburgerBtn.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('hidden');
+      });
+    
+      document.addEventListener('click', function (event) {
+        if (!dropdownMenu.contains(event.target) && !hamburgerBtn.contains(event.target)) {
+          dropdownMenu.classList.add('hidden');
+        }
+      });
+    </script>
+  </body>
+</html>

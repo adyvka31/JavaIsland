@@ -1,0 +1,184 @@
+body {
+    margin: 40px 0;
+    font-family: "Raleway";
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    place-items: center;
+  }
+  .javaisland2{
+    background: linear-gradient(to right, #15B392, #159378);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 200px #15B392;
+  }
+  .javaisland{
+    background: #D2FF72;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 200px #D2FF72;
+}
+
+.bg-guide{
+  background-image: linear-gradient(rgba(21, 179, 146, 0.90), rgba(21, 179, 146, 0.90)), url(https://img.freepik.com/free-photo/indonesia-landscape-digital-art_23-2151625227.jpg?t=st=1729147290~exp=1729150890~hmac=a3fdbbecc33a2148d9e0980631eca10c65fabb650c41ea591203c357d9243dec&w=1800);
+  background-size: cover;
+  background-position: center;
+}
+  
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#pembungkus {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+#pembungkus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, #15b391b1);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#pembungkus:hover::before {
+  opacity: 1;
+}
+
+#pembungkus p {
+  width: 100%;
+  font-weight: 600;
+  color: #fff;
+  font-size: 22px;
+  bottom: 0;
+  text-align: center;
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#pembungkus:hover p {
+  bottom: 40%;
+  opacity: 1;
+}
+
+.fadeinup {
+  animation: fadeInDown 1s ease-in-out forwards;
+}
+.fadeindown {
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+.fadeinright {
+  animation: fadeInRight 1s ease-in-out forwards;
+}
+.fadeinleft {
+  animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+.fadeinup2 {
+  animation: fadeInUp linear;
+  transition: 0.3s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+.fadeindown2 {
+  animation: fadeInDown linear;
+  transition: 0.3s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+
+.fadeinrightup {
+  animation: fadeInRight linear;
+  transition: 0.3s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+
+.fadeinleftup {
+  animation: fadeInLeft linear;
+  transition: 0.3s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

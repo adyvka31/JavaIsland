@@ -1,0 +1,243 @@
+body {
+    margin: 40px 0;
+    font-family: "Raleway";
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    place-items: center;
+  }
+
+  .javaisland2{
+    background: linear-gradient(to right, #15B392, #159378);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 200px #15B392;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .fadeinup {
+    animation: fadeInDown 1s ease-in-out forwards;
+  }
+  .fadeindown {
+    animation: fadeInUp 1s ease-in-out forwards;
+  }
+  .fadeinright {
+    animation: fadeInRight 1s ease-in-out forwards;
+  }
+  .fadeinleft {
+    animation: fadeInLeft 1s ease-in-out forwards;
+  }
+
+  .fadeinup2 {
+    animation: fadeInUp linear;
+    transition: 0.3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+  }
+  .fadeindown2 {
+    animation: fadeInDown linear;
+    transition: 0.3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+  }
+
+  .fadeinrightup {
+    animation: fadeInRight linear;
+    transition: 0.3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+  }
+
+  .fadeinleftup {
+    animation: fadeInLeft linear;
+    transition: 0.3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+  }
+
+  .gege{
+    transition: transform .2s
+  }
+  .gege:hover{
+    transform: scale(1.1);
+  }
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .marquee{
+      justify-content: center;
+      align-items: center;
+    }
+
+
+
+    .parallax {
+        background-image: url('/background-hero\ \(1\).png'); /* Ganti dengan URL gambar latar belakang Anda */
+        height: 100vh;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+    }
+
+    .fade-in {
+        animation: fadeIn 1s ease-in forwards;
+    }
+
+    /* Tooltip styles */
+    
+    .image-container:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* Click Me animation */
+    .click-me {
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .image-container:hover .click-me {
+        opacity: 1;
+        animation: fadeIn 0.5s forwards;
+    }
+
+    /* Gambar dengan ukuran tetap */
+    .fixed-size {
+        width: 400px; /* Ukuran yang sama untuk semua gambar */
+        height: 350px; /* Ukuran yang sama untuk semua gambar */
+        object-fit: cover; /* Mengatur cara gambar ditampilkan */
+        border-radius: 1rem; /* Sudut lengkung */
+    }
+    .fadeinup2 {
+      animation: fadeInUp linear;
+      transition: 0.3s ease-in-out;
+      animation-timeline: view();
+      animation-range: entry 0% cover 20%;
+    }
+    .fadeindown2 {
+      animation: fadeInDown linear;
+      transition: 0.3s ease-in-out;
+      animation-timeline: view();
+      animation-range: entry 0% cover 20%;
+    }
+    
+    .fadeinrightup {
+      animation: fadeInRight linear;
+      transition: 0.3s ease-in-out;
+      animation-timeline: view();
+      animation-range: entry 0% cover 20%;
+    }
+    
+    .fadeinleftup {
+      animation: fadeInLeft linear;
+      transition: 0.3s ease-in-out;
+      animation-timeline: view();
+      animation-range: entry 0% cover 20%;
+    }
+
+  @keyframes slide-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes slide-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(70px);
+      visibility: visible;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+  }
+
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-70px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-70px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(70px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+.zoom-in {
+    animation: zoomIn 1s ease-in forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soto Kudus | JavaIsland</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@500;700&display=swap" rel="stylesheet"/>
+    <style>
+      body {
+        margin: 40px 0;
+        font-family: "Raleway";
+        font-size: 14px;
+        font-weight: 500;
+        background-color: #BCAAA4;
+        -webkit-font-smoothing: antialiased;
+        place-items: center;
+      }
+      .fadeinup{
+      animation: fadeInUp 1s ease-in-out forwards;
+}
+    .fadeinup2{
+      animation: fadeInUp linear;
+      transition: 0.3s ease-in-out;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+      }
+      @keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(70px);
+      visibility: visible;
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+  }
+}
+    </style>
+</head>
+<body class="bg-yellow-50">
+
+  <!--  -->
+
+  <nav
+      class="bg-[#15B392] fixed mt-2 top-4 left-1/2 transform -translate-x-1/2 w-10/12 max-w-screen-lg rounded-full py-4 z-50 shadow-sm"
+    >
+      <div class="flex justify-evenly items-center px-16">
+        <ul id="navbar-left" class="hidden md:flex space-x-20">
+        <li>
+          <a href="index.html" class="text-white relative garis font-bold">BERANDA</a>
+        </li>
+        <li>
+          <a href="culture.html" class="text-white relative garis font-semibold">BUDAYA</a>
+        </li>
+      </ul>
+      <img class="w-8" src="Images/logo_ji.png">
+        <ul id="navbar-right" class="hidden md:flex space-x-20">
+          <li>
+            <a href="explore.html" class="text-white relative garis font-semibold">JELAJAHI</a>
+          </li>
+          <li>
+            <a href="askjava.html" class="text-white relative garis font-semibold">TANYA JAWA</a>
+          </li>
+        </ul>
+        <div class="md:hidden">
+          <button id="hamburger-btn" class="text-white focus:outline-none">
+            <svg src="images/burger-icon.svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="dropdown-menu" class="hidden absolute top-full right-0 bg-[#15B392] shadow-lg rounded-lg">
+        <ul class="flex flex-col space-y-3 px-5 py-2 text-right">
+          <li><a href="index.html" class="text-white font-bold">BERANDA</a></li>
+          <li><a href="culture.html" class="text-white font-semibold">BUDAYA</a></li>
+          <li><a href="explore.html" class="text-white font-semibold">JELAJAHI</a></li>
+          <li><a href="askjava.html" class="text-white font-semibold">TANYA JAWA</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-52 mx-auto flex flex-col">
+          <div class="lg:w-4/6 mx-auto">
+            <div class="rounded-lg h-64 overflow-hidden fadeinup">
+              <img alt="content" class="object-cover object-center h-full w-full" src="https://i.pinimg.com/564x/81/4f/c5/814fc50e0f5a50efc3b9630fc281680e.jpg">
+            </div>
+            <div class="flex flex-col sm:flex-row mt-10">
+              <div class="w-full mt-4 text-center sm:text-left">
+                <p class="leading-relaxed text-lg mb-4 fadeinup">Jawa Tengah. Soto Kudus, hampir mirip dengan soto Lamongan, soto kudus berisi suwiran ayam dan tauge. Terkadang soto kudus juga menggunakan daging kerbau. Kuahnya lebih bening.</p>
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row mt-10">
+                <div class="w-full mt-4 text-center sm:text-left">
+                  <p class="leading-relaxed text-lg mb-4 fadeinup">Soto Kudus dalam penyajiannya memiliki tradisi disajikan dalam mangkuk kecil untuk satu porsi soto. Sama seperti soto lainnya, soto kudus juga ditemani dengan sambal dan jeruk nipis. Masakan Soto Kudus tidak hanya dapat ditemukan di Kudus, saat ini juga dapat ditemukan di berbagai kota di Indonesia.</p>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row my-10">
+                <div class="w-full mt-4 text-center sm:text-left">
+                  <p class="leading-relaxed text-lg mb-4 fadeinup2">Soto kudus tidak ada yang menggunakan daging sapi karena penghormatan muslim Kudus terhadap agama Hindu, yang mana sapi adalah hewan yang mereka anggap suci. Namun hal ini hanya sebatas anjuran yang berasal dari Sunan Kudus. Dia mengajari Orang Islam untuk menghargai agama lain, khususnya agama Hindu.Ini disebabkan ketika itu di Kudus banyak orang yang memeluk agama Hindu. Hal ini merupakan bentuk toleransi yang telah diajarkan oleh Sunan Kudus pada pemeluk agama Islam yang tinggal di daerah Kudus. Budaya itu pun masih berlaku sampai sekarang.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="w-full bg-[#15B392]">
+        <div class="container px-6 py-8 mx-auto">
+            <div class="flex flex-col items-center text-center">
+              <img class="w-8" src="Images/logo_ji.png">
+    
+                <p class="max-w-md mx-auto mt-4 text-white fadeinup">Pulau Terbesar ke-13 Di Dunia.</p>
+    
+                <div class="flex flex-col mt-4 sm:flex-row sm:items-center sm:justify-center fadeinup">
+                  <a href="explore.html">
+                    <button
+                      class="flex items-center justify-center order-1 w-full px-2 py-2 mt-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform border rounded-md sm:mx-2 sm:mt-0 sm:w-auto hover:bg-white hover:text-[#15B392] focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40"
+                    >
+                      <span href="explore.html" class="mx-1">Ayo Kunjungi</span>
+                    </button>
+                  </a>
+                    <a href="index.html">
+                      <button
+                      class="flex items-center justify-center order-1 w-full px-2 py-2 mt-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform border rounded-md sm:mx-2 sm:mt-0 sm:w-auto hover:bg-white hover:text-[#15B392] focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40"
+                    >
+                      <span href="index.html" class="mx-1">Baca selengkapnya</span>
+                    </button>
+                    </a>
+                </div>
+            </div>
+    
+            <hr class="my-10 border-gray-200" />
+    
+            <div class="flex flex-col items-center sm:flex-row sm:justify-between fadeinup">
+                <p class="text-sm text-white">© JavaIsland 2024. All Rights Reserved.</p>
+    
+                <div class="flex mt-3 -mx-2 sm:mt-0">
+                    <a href="culture.html" class="mx-2 text-sm text-white transition-colors duration-300 hover:text-white dark:hover:text-gray-300" aria-label="Reddit"> Culture </a>
+    
+                    <a href="explore.html" class="mx-2 text-sm text-white transition-colors duration-300 hover:text-white dark:hover:text-gray-300" aria-label="Reddit"> Explore </a>
+    
+                    <a href="askjava.html" class="mx-2 text-sm text-white transition-colors duration-300 hover:text-white dark:hover:text-gray-300" aria-label="Reddit"> Ask Java </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const dropdownMenu = document.getElementById('dropdown-menu');
+    
+      hamburgerBtn.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('hidden');
+      });
+    
+      document.addEventListener('click', function (event) {
+        if (!dropdownMenu.contains(event.target) && !hamburgerBtn.contains(event.target)) {
+          dropdownMenu.classList.add('hidden');
+        }
+      });
+    </script>
+</body>
+</html>
